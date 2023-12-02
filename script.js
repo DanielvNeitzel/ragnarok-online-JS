@@ -18,7 +18,6 @@ function clickInput(type) {
         default:
             break;
     }
-
 }
 
 function playMsc(status) {
@@ -28,7 +27,6 @@ function playMsc(status) {
         soundGame.play();
         status_temp = status;
     }
-    
 }
 
 function loginGame(e) {
