@@ -1,0 +1,131 @@
+* {
+    cursor: url('img/cursor_rag_default.png'), auto;
+}
+
+input {
+    border: 1px solid #cacaca;
+}
+
+input:focus-visible {
+    outline: #5a82c6 auto 1px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url(img/bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.hide {
+    display: none;
+}
+
+.row {
+    width: 100%;
+    margin: 10px 0 10px 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-input{
+    width: 90px;
+    text-align: right;
+    margin: 0 20px 0 0;
+    color: #5a6b9c;
+}
+
+.btn {
+    font-family: system-ui;
+    background-color: #acbcdb;
+    border: 2px solid #bdbdbd;
+    padding: 5px 10px 5px 10px;
+    margin: auto 5px auto 5px;
+    border-radius: 10px;
+}
+
+.btn:hover {
+    font-family: system-ui;
+    background: #add6ffbc;
+    border: 2px solid #bdbdbd;
+    padding: 5px 10px 5px 10px;
+    margin: auto 5px auto 5px;
+    border-radius: 10px;
+}
+
+.btn:focus-visible {
+    outline: #5a82c6 auto 1px;
+}
+
+.btn:active {
+    outline: #5a82c6 auto 1px;
+}
+
+#block_login {
+    width: 400px;
+    height: 200px;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background: #ffffff;
+    box-shadow: 0 0 5px black;
+    border-radius: 5px;
+}
+
+.btn_default {
+    width: 12px;
+    height: 12px;
+    background: #3165e2;
+    border-radius: 25px;
+    margin: 0 5px 0 5px;
+}
+
+.login_header {
+    display: flex;
+    font-family: system-ui;
+    font-size: 12px;
+    font-weight: 600;
+    border-bottom: 2px solid #000;
+    background: rgb(201, 224, 247);
+    background: linear-gradient(0deg, rgba(201, 224, 247, 1) 25%, rgba(163, 178, 214, 1) 50%, rgba(201, 224, 247, 1) 75%, rgba(163, 178, 214, 1) 100%);
+    height: 20px;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    align-items: center;
+}
+
+.login_body {
+    display: flex;
+    font-family: system-ui;
+    font-size: 10px;
+    font-weight: 600;
+    height: 135px;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+.login_footer {
+    display: flex;
+    font-family: system-ui;
+    font-size: 12px;
+    font-weight: 600;
+    border-top: 2px solid #cacaca;
+    height: 40px;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    align-items: center;
+    border-radius: 0 0 5px 5px;
+    justify-content: flex-end;
+}
