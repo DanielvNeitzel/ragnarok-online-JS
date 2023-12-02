@@ -1,49 +1,60 @@
-var object = document.getElementsByClassName('draggable'),
+var object = document.querySelectorAll('.draggable'),
   initX, initY, firstX, firstY;
 
-object[0].addEventListener('mousedown', function (e) {
+for (var x in object) {
+  object[x].onclick = function () {
+    Selected(this);
+  };
+};
 
-  object[0].style.background = "#ffffffb0";
-  e.preventDefault();
-  initX = this.offsetLeft;
-  initY = this.offsetTop;
-  firstX = e.pageX;
-  firstY = e.pageY;
+function Selected(current) {
+  current.addEventListener('mousedown', function (e) {
 
-  this.addEventListener('mousemove', dragIt, false);
-
-  window.addEventListener('mouseup', function () {
-    object[0].style.background = "#ffffff";
-    object[0].removeEventListener('mousemove', dragIt, false);
-  }, false);
-
-}, false);
-
-object[0].addEventListener('touchstart', function (e) {
-
-  e.preventDefault();
-  initX = this.offsetLeft;
-  initY = this.offsetTop;
-  var touch = e.touches;
-  firstX = touch.pageX;
-  firstY = touch.pageY;
-
-  this.addEventListener('touchmove', swipeIt, false);
-
-  window.addEventListener('touchend', function (e) {
+    current.style.background = "#ffffffb0";
     e.preventDefault();
-    object[0].removeEventListener('touchmove', swipeIt, false);
+    initX = this.offsetLeft;
+    initY = this.offsetTop;
+    firstX = e.pageX;
+    firstY = e.pageY;
+
+    this.addEventListener('mousemove', dragIt, false);
+
+    window.addEventListener('mouseup', function () {
+      current.style.background = "#ffffff";
+      current.removeEventListener('mousemove', dragIt, false);
+    }, false);
+
   }, false);
 
-}, false);
+  current.addEventListener('touchstart', function (e) {
 
-function dragIt(e) {
-  this.style.left = initX + e.pageX - firstX + 'px';
-  this.style.top = initY + e.pageY - firstY + 'px';
+    e.preventDefault();
+    initX = this.offsetLeft;
+    initY = this.offsetTop;
+    var touch = e.touches;
+    firstX = touch.pageX;
+    firstY = touch.pageY;
+
+    this.addEventListener('touchmove', swipeIt, false);
+
+    window.addEventListener('touchend', function (e) {
+      e.preventDefault();
+      current.removeEventListener('touchmove', swipeIt, false);
+    }, false);
+
+  }, false);
+
+  function dragIt(e) {
+    this.style.left = initX + e.pageX - firstX + 'px';
+    this.style.top = initY + e.pageY - firstY + 'px';
+    current.style.zIndex = current.style.zIndex + "1";
+    console.log(current.style.zIndex);
+  }
+
+  function swipeIt(e) {
+    var contact = e.touches;
+    this.style.left = initX + contact.pageX - firstX + 'px';
+    this.style.top = initY + contact.pageY - firstY + 'px';
+  }
 }
 
-function swipeIt(e) {
-  var contact = e.touches;
-  this.style.left = initX + contact.pageX - firstX + 'px';
-  this.style.top = initY + contact.pageY - firstY + 'px';
-}
