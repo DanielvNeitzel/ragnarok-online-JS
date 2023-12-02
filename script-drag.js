@@ -8,9 +8,11 @@ for (var x in object) {
 };
 
 function Selected(current) {
+  current.style.zIndex = current.style.zIndex + 1;
   current.addEventListener('mousedown', function (e) {
 
     current.style.background = "#ffffffb0";
+    current.style.zIndex = current.style.zIndex + 1;
     e.preventDefault();
     initX = this.offsetLeft;
     initY = this.offsetTop;
@@ -18,8 +20,8 @@ function Selected(current) {
     firstY = e.pageY;
 
     this.addEventListener('mousemove', dragIt, false);
-
     window.addEventListener('mouseup', function () {
+      current.style.zIndex = 0;
       current.style.background = "#ffffff";
       current.removeEventListener('mousemove', dragIt, false);
     }, false);
@@ -47,8 +49,6 @@ function Selected(current) {
   function dragIt(e) {
     this.style.left = initX + e.pageX - firstX + 'px';
     this.style.top = initY + e.pageY - firstY + 'px';
-    current.style.zIndex = current.style.zIndex + "1";
-    console.log(current.style.zIndex);
   }
 
   function swipeIt(e) {
