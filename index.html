@@ -9,7 +9,8 @@
 </head>
 
 <body onclick="playMsc('music_on')">
-  <div id="block_login">
+  
+  <div class="block_login draggable">
     <div class="login_header">
       <span class="btn_default"></span> LogOn
     </div>
@@ -37,12 +38,22 @@
     </div>
   </div>
 
+  <div class="block_default">
+    <div class="login_header">
+      <span class="btn_default"></span> Avisos
+    </div>
+    <div class="login_body">
+      <h1>Servidor de Ragnarok JS</h1>
+    </div>
+  </div>
+
   <audio id="musicGame" controls loop class="hide">
     <source src="" type="audio/mpeg">
     Your browser does not support the audio element.
   </audio>
 
   <script src="script.js"></script>
+  <script src="script-drag.js"></script>
 </body>
 
 </html>

@@ -68,7 +68,18 @@ body {
     outline: #5a82c6 auto 1px;
 }
 
-#block_login {
+.block_default {
+    width: 400px;
+    height: 200px;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background: #ffffff;
+}
+
+.block_login {
     width: 400px;
     height: 200px;
     position: absolute;
@@ -79,6 +90,7 @@ body {
     background: #ffffff;
     box-shadow: 0 0 5px black;
     border-radius: 5px;
+    z-index: 999;;
 }
 
 .btn_default {
