@@ -8,19 +8,19 @@
 
 </head>
 
-<body onclick="playMsc('music_on')">
+<body onclick="playMsc('music_login')">
   
-  <div class="block_login draggable">
-    <div class="login_header">
+  <div class="block_default block_login draggable">
+    <div class="default_header">
       <span class="btn_default"></span> LogOn
     </div>
-    <div class="login_body">
+    <div class="default_body">
       <div class="row">
         <div>
           <h1 class="text-input">ID</h1>
         </div>
         <div>
-          <input onclick="clickInput('id')" type="text" name="input_id" id="input_id">
+          <input onclick="clickInput('id')" type="text" name="input_user_id" id="input_user_id">
         </div>
       </div>
       <div class="row">
@@ -28,26 +28,40 @@
           <h1 class="text-input">Password</h1>
         </div>
         <div>
-          <input onclick="clickInput('pass')" type="password" name="input_pass" id="input_pass">
+          <input onclick="clickInput('pass')" type="password" name="input_user_pass" id="input_user_pass">
         </div>
       </div>
     </div>
-    <div class="login_footer">
-      <button class="btn" onclick="loginGame()">login</button>
-      <button class="btn" onclick="exitGame()">exit</button>
+    <div class="default_footer">
+      <button class="btn click-effect-login" onclick="loginGame()">login</button>
+      <button class="btn click-effect-login" onclick="exitGame()">exit</button>
     </div>
   </div>
 
-  <div class="block_default">
-    <div class="login_header">
+  <div class="block_default block_news">
+    <div class="default_header">
       <span class="btn_default"></span> Avisos
     </div>
-    <div class="login_body">
+    <div class="default_body">
       <h1>Servidor de Ragnarok JS</h1>
     </div>
   </div>
 
+  <div class="block_default block_select_world hide draggable">
+    <div class="default_header">
+      <span class="btn_default"></span> Avisos
+    </div>
+    <div class="default_body">
+      
+    </div>
+  </div>
+
   <audio id="musicGame" controls loop class="hide">
+    <source src="" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <audio id="effectGame" controls class="hide">
     <source src="" type="audio/mpeg">
     Your browser does not support the audio element.
   </audio>
