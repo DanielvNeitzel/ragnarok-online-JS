@@ -1,9 +1,11 @@
 
 
-const inputId = document.getElementById('input_id');
-const inputPass = document.getElementById('input_pass');
+const inputId = document.getElementById('input_user_id');
+const inputPass = document.getElementById('input_user_pass');
+const clickLBtnLogin = document.querySelectorAll('.click-effect-login');
 const b = document.querySelector('body');
-var status_temp = '';
+var music_temp = '';
+var effect_temp = '';
 
 function clickInput(type) {
     switch (type) {
@@ -21,18 +23,26 @@ function clickInput(type) {
 }
 
 function playMsc(status) {
-    if (status_temp !== 'music_on') {
+    if (music_temp !== 'music_login') {
         const soundGame = document.getElementById('musicGame');
+        soundGame.volume = 0.1;
         soundGame.src = 'audio/login_sound.mp3';
         soundGame.play();
-        status_temp = status;
+        music_temp = status;
     }
 }
 
-function loginGame(e) {
-    e.preventDefault();
+for (let btn = 0; btn < clickLBtnLogin.length; btn++) {
+    clickLBtnLogin[btn].addEventListener('click', () => {
+        const effectGame = document.getElementById('effectGame');
+        effectGame.volume = 0.1;
+        effectGame.src = 'audio/login_button_click.mp3';
+        effectGame.play();
+    });
 }
 
-function exitGame(e) {
-    e.preventDefault();
+function loginGame() {
+}
+
+function exitGame() {
 }

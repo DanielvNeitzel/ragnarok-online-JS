@@ -1,5 +1,11 @@
 * {
     cursor: url('img/cursor_rag_default.png'), auto;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 input {
@@ -21,7 +27,7 @@ body {
 }
 
 .hide {
-    display: none;
+    display: none!important;
 }
 
 .row {
@@ -68,8 +74,45 @@ body {
     outline: #5a82c6 auto 1px;
 }
 
+.btn_default {
+    width: 12px;
+    height: 12px;
+    background: #3165e2;
+    border-radius: 25px;
+    margin: 0 5px 0 5px;
+}
+
+/* ------------------------------ */
+/* ------- JANELA DEFAULT ------- */
+/* ------------------------------ */
+
+
 .block_default {
-    width: 400px;
+    width: 100%;
+    max-width: 400px;
+    height: 200px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    background: #ffffff;
+}
+
+.block_select_world {
+    width: 100%;
+    max-width: 700px;
+    height: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background: #ffffff;
+    box-shadow: 0 0 5px black;
+    border-radius: 5px;
+}
+
+.block_news {
+    width: 100%;
+    max-width: 400px;
     height: 200px;
     position: absolute;
     top: 30%;
@@ -77,6 +120,8 @@ body {
     transform: translate(-50%, -50%);
     text-align: center;
     background: #ffffff;
+    box-shadow: 0 0 5px black;
+    border-radius: 5px;
 }
 
 .block_login {
@@ -92,15 +137,7 @@ body {
     border-radius: 5px;
 }
 
-.btn_default {
-    width: 12px;
-    height: 12px;
-    background: #3165e2;
-    border-radius: 25px;
-    margin: 0 5px 0 5px;
-}
-
-.login_header {
+.default_header {
     display: flex;
     font-family: system-ui;
     font-size: 12px;
@@ -115,7 +152,7 @@ body {
     align-items: center;
 }
 
-.login_body {
+.default_body {
     display: flex;
     font-family: system-ui;
     font-size: 10px;
@@ -126,7 +163,7 @@ body {
     align-content: center;
 }
 
-.login_footer {
+.default_footer {
     display: flex;
     font-family: system-ui;
     font-size: 12px;
