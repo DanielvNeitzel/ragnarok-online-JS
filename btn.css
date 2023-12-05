@@ -1,0 +1,150 @@
+.btn {
+  width: 47px;
+  height: 22px;
+  border: 0;
+  margin: 0 10px 0 0;
+}
+
+.btn_back {
+  background: url(img/button/btn_back.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.btn_back:hover {
+  background: url(img/button/btn_back.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.btn_cancel {
+  background: url(img/button/btn_cancel.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.btn_cancel:hover {
+  background: url(img/button/btn_cancel_a.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.btn_close {
+  background: url(img/button/btn_close.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.btn_close:hover {
+  background: url(img/button/btn_close.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.btn_connect {
+  background: url(img/button/btn_connect.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.btn_connect:hover {
+  background: url(img/button/btn_connect_a.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.btn_del {
+  background: url(img/button/btn_del.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.btn_del:hover {
+  background: url(img/button/btn_del_a.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.btn_exit {
+  background: url(img/button/btn_exit.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.btn_exit:hover {
+  background: url(img/button/btn_exit_a.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.btn_help {
+  background: url(img/button/btn_help.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.btn_help:hover {
+  background: url(img/button/btn_help.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.btn_help2 {
+  background: url(img/button/btn_help2.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.btn_help2:hover {
+  background: url(img/button/btn_help2.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.btn_make {
+  background: url(img/button/btn_make.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.btn_make:hover {
+  background: url(img/button/btn_make_a.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.btn_next {
+  background: url(img/button/btn_next.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.btn_next:hover {
+  background: url(img/button/btn_next.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.btn_ok {
+  background: url(img/button/btn_ok.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.btn_ok:hover {
+  background: url(img/button/btn_ok_a.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.btn_ok_dis {
+  background: url(img/button/btn_ok_dis.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.btn_ok_dis:hover {
+  background: url(img/button/btn_ok_dis.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
