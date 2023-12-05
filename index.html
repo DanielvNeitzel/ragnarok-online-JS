@@ -1,46 +1,67 @@
 <html>
 
 <head>
-  <link rel="stylesheet" href="style.css">
+
   <meta charset='UTF-8'>
+  <link rel="icon" type="image/x-icon" href="icon.png">
   <title>Ragnarok Online JS</title>
   <meta name="robots" content="noindex">
-
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="btn.css">
 </head>
 
-<body onclick="playMsc('music_login')">
-  
-  <div class="block_default block_login draggable">
+<body onclick="playMsc('music_login');">
+
+  <div class="black_screen"></div>
+
+  <div class="block_default block_login hide draggable">
     <div class="default_header">
-      <span class="btn_default"></span> LogOn
+      <span class="orb_blue"></span> LogOn
     </div>
     <div class="default_body">
-      <div class="row">
-        <div>
-          <h1 class="text-input">ID</h1>
+      <div class="block_login_form">
+        <div class="row">
+          <div>
+            <h1 class="text-input">ID</h1>
+          </div>
+          <div>
+            <input onclick="clickInput('id')" type="text" name="input_user_id" id="input_user_id">
+          </div>
         </div>
-        <div>
-          <input onclick="clickInput('id')" type="text" name="input_user_id" id="input_user_id">
-        </div>
-      </div>
-      <div class="row">
-        <div>
-          <h1 class="text-input">Password</h1>
-        </div>
-        <div>
-          <input onclick="clickInput('pass')" type="password" name="input_user_pass" id="input_user_pass">
+        <div class="row">
+          <div>
+            <h1 class="text-input">Password</h1>
+          </div>
+          <div>
+            <input onclick="clickInput('pass')" type="password" name="input_user_pass" id="input_user_pass">
+          </div>
         </div>
       </div>
     </div>
     <div class="default_footer">
-      <button class="btn click-effect-login" onclick="loginGame()">login</button>
-      <button class="btn click-effect-login" onclick="exitGame()">exit</button>
+      <button class="btn btn_connect click-effect-login" onclick="loginGame()"></button>
+      <button class="btn btn_exit click-effect-login" onclick="exitGame()"></button>
     </div>
   </div>
 
-  <div class="block_default block_news">
+  <div class="block_default block_global_msg hide draggable">
     <div class="default_header">
-      <span class="btn_default"></span> Avisos
+      <span class="orb_blue"></span> Mensagem
+    </div>
+    <div class="default_body">
+      <div class="block_message">
+        <p>O servidor ainda reconhece seu último log-in.<br> Tente novamente em alguns minutos.</p>
+      </div>
+    </div>
+    <div class="default_footer">
+      <button class="btn btn_ok click-effect-login" onclick="fechar(this)"></button>
+      <button class="btn btn_cancel click-effect-login" onclick="fechar(this)"></button>
+    </div>
+  </div>
+
+  <div class="block_default block_news hide">
+    <div class="default_header">
+      <span class="orb_blue"></span> mensagem
     </div>
     <div class="default_body">
       <h1>Servidor de Ragnarok JS</h1>
@@ -49,10 +70,20 @@
 
   <div class="block_default block_select_world hide draggable">
     <div class="default_header">
-      <span class="btn_default"></span> Avisos
+      <span class="orb_blue"></span> Seleção de mundo
     </div>
     <div class="default_body">
-      
+      teste
+    </div>
+  </div>
+
+  <div class="block_default block_select_char hide draggable">
+    <div class="default_header">
+      <span class="orb_blue"></span> mensagem
+    </div>
+    <div class="default_body">
+      <div class="selectChar">
+      </div>
     </div>
   </div>
 

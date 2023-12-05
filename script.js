@@ -22,6 +22,10 @@ function clickInput(type) {
     }
 }
 
+function showLoginScreen(){
+    
+}
+
 function playMsc(status) {
     if (music_temp !== 'music_login') {
         const soundGame = document.getElementById('musicGame');
