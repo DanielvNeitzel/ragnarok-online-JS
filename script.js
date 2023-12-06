@@ -46,6 +46,27 @@ function showLoginScreen() {
     );
 }
 
+function cmd(selected) {
+    switch (selected) {
+        case 'exitGame':
+            document.querySelector('#win-confirm-exit').style.zIndex = 1;
+            document.querySelector('#win-confirm-exit').classList.remove('hide');
+            break;
+
+        case 'closeConfirmExit':
+            document.querySelector('#win-confirm-exit').classList.add('hide');
+            break;
+
+        case 'resetPage':
+            document.querySelector('#win-confirm-exit').classList.add('hide');
+            location.replace(location.href);
+            break;
+
+        default:
+            break;
+    }
+}
+
 function playMsc(status) {
     if (music_temp !== 'music_login') {
         const soundGame = document.getElementById('musicGame');

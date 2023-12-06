@@ -16,7 +16,7 @@
     <p>tap the screen to start</p>
   </div>
 
-  <div class="block_default block_login hide draggable">
+  <div id="win-login" class="block_default block_login hide draggable">
     <div class="default_header">
       <span class="orb_blue"></span> LogOn
     </div>
@@ -41,14 +41,15 @@
       </div>
     </div>
     <div class="default_footer">
-      <button class="btn btn_connect click-effect-login" onclick="loginGame()"></button>
-      <button class="btn btn_exit click-effect-login" onclick="exitGame()"></button>
+      <button class="btn btn_connect click-effect-login" onclick="cmd('loginGame')"></button>
+      <button class="btn btn_exit click-effect-login" onclick="cmd('exitGame')"></button>
     </div>
   </div>
 
-  <div class="block_default block_global_msg hide draggable">
+  <div id="blc_last_login" class="block_default block_global_msg hide draggable">
     <div class="default_header">
-      <span class="orb_blue"></span> Mensagem
+      <span class="orb_blue"></span>
+      <p>Mensagem</p>
     </div>
     <div class="default_body h_s">
       <div class="block_message">
@@ -56,14 +57,15 @@
       </div>
     </div>
     <div class="default_footer">
-      <button class="btn btn_ok click-effect-login" onclick="fechar(this)"></button>
-      <button class="btn btn_cancel click-effect-login" onclick="fechar(this)"></button>
+      <button class="btn btn_ok click-effect-login" onclick="cmd('fecharBlcLastLogin')"></button>
+      <button class="btn btn_cancel click-effect-login" onclick="cmd('fecharBlcLastLogin')"></button>
     </div>
   </div>
 
-  <div class="block_default block_global_msg hide draggable">
+  <div id="win-confirm-exit" class="block_default block_global_msg hide draggable">
     <div class="default_header">
-      <span class="orb_blue"></span> Mensagem
+      <span class="orb_blue"></span>
+      <p>Mensagem</p>
     </div>
     <div class="default_body">
       <div class="block_message">
@@ -71,14 +73,15 @@
       </div>
     </div>
     <div class="default_footer">
-      <button class="btn btn_ok click-effect-login" onclick="fechar(this)"></button>
-      <button class="btn btn_cancel click-effect-login" onclick="fechar(this)"></button>
+      <button class="btn btn_ok click-effect-login" onclick="cmd('resetPage')"></button>
+      <button class="btn btn_cancel click-effect-login" onclick="cmd('closeConfirmExit')"></button>
     </div>
   </div>
 
   <div class="block_default block_news hide">
     <div class="default_header">
-      <span class="orb_blue"></span> mensagem
+      <span class="orb_blue"></span>
+      <p>Mensagem</p>
     </div>
     <div class="default_body h_s">
       <div class="h-100 flex-v-center">
