@@ -12,13 +12,15 @@
 
 <body onclick="playMsc('music_login');">
 
-  <div class="black_screen"></div>
+  <div class="black_screen">
+    <p>tap the screen to start</p>
+  </div>
 
   <div class="block_default block_login hide draggable">
     <div class="default_header">
       <span class="orb_blue"></span> LogOn
     </div>
-    <div class="default_body">
+    <div class="default_body h_m">
       <div class="block_login_form">
         <div class="row">
           <div>
@@ -48,9 +50,24 @@
     <div class="default_header">
       <span class="orb_blue"></span> Mensagem
     </div>
-    <div class="default_body">
+    <div class="default_body h_s">
       <div class="block_message">
         <p>O servidor ainda reconhece seu último log-in.<br> Tente novamente em alguns minutos.</p>
+      </div>
+    </div>
+    <div class="default_footer">
+      <button class="btn btn_ok click-effect-login" onclick="fechar(this)"></button>
+      <button class="btn btn_cancel click-effect-login" onclick="fechar(this)"></button>
+    </div>
+  </div>
+
+  <div class="block_default block_global_msg hide draggable">
+    <div class="default_header">
+      <span class="orb_blue"></span> Mensagem
+    </div>
+    <div class="default_body">
+      <div class="block_message">
+        <p>Deseja fechar o jogo ?</p>
       </div>
     </div>
     <div class="default_footer">
@@ -63,26 +80,9 @@
     <div class="default_header">
       <span class="orb_blue"></span> mensagem
     </div>
-    <div class="default_body">
-      <h1>Servidor de Ragnarok JS</h1>
-    </div>
-  </div>
-
-  <div class="block_default block_select_world hide draggable">
-    <div class="default_header">
-      <span class="orb_blue"></span> Seleção de mundo
-    </div>
-    <div class="default_body">
-      teste
-    </div>
-  </div>
-
-  <div class="block_default block_select_char hide draggable">
-    <div class="default_header">
-      <span class="orb_blue"></span> mensagem
-    </div>
-    <div class="default_body">
-      <div class="selectChar">
+    <div class="default_body h_s">
+      <div class="h-100 flex-v-center">
+        <h1>Servidor de Ragnarok JS</h1>
       </div>
     </div>
   </div>
