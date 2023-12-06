@@ -31,11 +31,28 @@ body {
     display: none !important;
 }
 
+.h-100 {
+    height: 100%;
+}
+
+.flex-v-center {
+    display:flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
 .black_screen {
     width: 100vw;
     height: 100vh;
     background: #000;
     z-index: 999;
+    color: #fff;
+    display: flex;
+    font-family: system-ui;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
 }
 
 .row {
@@ -57,6 +74,16 @@ body {
     font-size: 16px;
 }
 
+.block_login_form {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
 /* ------------------------------ */
 /* ------- JANELA DEFAULT ------- */
 /* ------------------------------ */
@@ -65,13 +92,13 @@ body {
 .block_message {
     display: flex;
     padding: 5px 20px;
-    height: 100%;
-    flex-direction: row;
+    height: auto;
+    flex-direction: column;
     flex-wrap: nowrap;
     align-content: center;
 }
 
-.block_message > p {
+.block_message>p {
     font-family: arial;
     font-size: 14px;
     font-weight: 400;
@@ -100,7 +127,7 @@ body {
 .block_select_world {
     width: 100%;
     max-width: 300px;
-    height: 250px;
+    height: auto;
     position: absolute;
     top: 70%;
     left: 50%;
@@ -114,9 +141,23 @@ body {
 .block_select_char {
     width: 100%;
     max-width: 700px;
-    height: 400px;
+    height: auto;
     position: absolute;
     top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background: #ffffff;
+    box-shadow: 0 0 5px black;
+    border-radius: 5px;
+}
+
+.block_news {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    position: absolute;
+    top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
@@ -128,20 +169,49 @@ body {
 .block_global_msg {
     width: 100%;
     max-width: 400px;
-    height: 200px;
+    height: auto;
     position: absolute;
-    top: 30%;
+    top: 55%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
     background: #ffffff;
     box-shadow: 0 0 5px black;
     border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+}
+
+.h_xs {
+    height: 80px!important;
+}
+
+.h_s {
+    height: 100px!important;
+}
+
+.h_m {
+    height: 150px!important;
+}
+
+.h_l {
+    height: 300px!important;
+}
+
+.h_xl {
+    height: 500px!important;
+}
+
+.h_xxl {
+    height: 625px!important;
 }
 
 .block_login {
     width: 400px;
-    height: 200px;
+    height: auto;
     position: absolute;
     top: 70%;
     left: 50%;
@@ -160,7 +230,7 @@ body {
     border-bottom: 2px solid #000;
     background: rgb(201, 224, 247);
     background: linear-gradient(0deg, rgba(201, 224, 247, 1) 25%, rgba(163, 178, 214, 1) 50%, rgba(201, 224, 247, 1) 75%, rgba(163, 178, 214, 1) 100%);
-    height: 20px;
+    height: 25px;
     flex-direction: row;
     flex-wrap: nowrap;
     align-content: center;
@@ -173,8 +243,8 @@ body {
     font-family: system-ui;
     font-size: 10px;
     font-weight: 600;
-    height: 145px;
-    justify-content: center;
+    height: 70%;
+    justify-content: flex-start;
     align-content: center;
     flex-direction: column;
 }
@@ -185,13 +255,59 @@ body {
     font-size: 12px;
     font-weight: 600;
     border-top: 2px solid #cacaca;
-    height: auto;
+    height: 20px;
     flex-direction: row;
     flex-wrap: nowrap;
     align-content: center;
     align-items: center;
     border-radius: 0 0 5px 5px;
     justify-content: flex-end;
-    margin: 0 0 10px 0;
-    padding: 4px 0 4px 0;
+    padding: 5px 0 5px 0;
+}
+
+.fadeInAnim {
+    -webkit-animation: fadeInEffect .3s ease-out;
+    -moz-animation: fadeInEffect .3s ease-out;
+    -o-animation: fadeInEffect .3s ease-out;
+    animation: fadeInEffect .3s ease-out;
+}
+
+@-webkit-keyframes fadeInEffect {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes fadeInEffect {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-o-keyframes fadeInEffect {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInEffect {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
