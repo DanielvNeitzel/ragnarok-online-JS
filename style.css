@@ -84,10 +84,6 @@ body {
     height: 100%;
 }
 
-.selectWorld {
-
-}
-
 /* ------------------------------ */
 /* ------- JANELA DEFAULT ------- */
 /* ------------------------------ */
@@ -175,7 +171,7 @@ body {
     max-width: 400px;
     height: auto;
     position: absolute;
-    top: 40%;
+    top: 48%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
@@ -316,8 +312,10 @@ body {
     }
 }
 
+/* ------------------------------ */
+/* ------- SELECT DEFAULT ------- */
+/* ------------------------------ */
 
-/* The container */
 .selectAlt {
     display: flex;
     position: relative;
@@ -329,55 +327,50 @@ body {
     flex-direction: column;
 }
 
-/* Hide the browser's default radio button */
 .selectAlt input {
     position: absolute;
     opacity: 0;
     cursor: pointer;
 }
 
-/* Create a custom radio button */
 .checkmark {
     position: absolute;
     display: flex;
     left: 0;
-    height: 21px;
-    border-bottom: 1px solid #000;
+    height: 22px;
+    border-bottom: 0;
     width: 100%;
     background-color: #eee;
     flex-direction: row;
-    flex-wrap: nowrap;
-    align-content: center;
     align-items: center;
+    font-weight: 400;
+    font-family: arial;
+    font-size: 13px;
+    flex-wrap: nowrap;
 }
 
 .checkmark > span {
     margin: 0 5px 0 5px;
 }
 
-/* On mouse-over, add a grey background color */
 .selectAlt:hover input~.checkmark {
     background-color: #ccc;
 }
 
-/* When the radio button is checked, add a blue background */
 .selectAlt input:checked~.checkmark {
     background-color: #a3b2d6;
 }
 
-/* Create the indicator (the dot/circle - hidden when not checked) */
 .checkmark:after {
     content: "";
     position: absolute;
     display: none;
 }
 
-/* Show the indicator (dot/circle) when checked */
 .selectAlt input:checked~.checkmark:after {
     display: block;
 }
 
-/* Style the indicator (dot/circle) */
 .selectAlt .checkmark:after {
     top: 9px;
     left: 9px;
