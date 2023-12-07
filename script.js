@@ -62,9 +62,39 @@ function cmd(selected) {
             location.replace(location.href);
             break;
 
+        case 'loginGame':
+            if (inputId.value !== '' || inputPass.value !== '') {
+                verificaLogin();
+            } else {
+                document.querySelector('#blc_msg_error').style.zIndex = 1;
+                document.querySelector('#blc_msg_error').classList.remove('hide');
+                document.querySelector('#title-msg-error').innerHTML = 'Mensagem'
+                document.querySelector('#text-msg-error').innerHTML = 'Usuário ou senha incorretos. Por favor, tente novamente';
+                document.querySelector('#block_message_login').classList.remove('hide');
+                document.querySelector('#block_login_form').classList.add('hide');
+            }
+            break;
+
+        case 'fecharBlcMsgError':
+            resetMsgError();
+            inputId.focus();
+            break;
+
         default:
             break;
     }
+}
+
+function resetMsgError() {
+    document.querySelector('#blc_msg_error').classList.add('hide');
+    document.querySelector('#block_message_login').classList.add('hide');
+    document.querySelector('#block_login_form').classList.remove('hide');
+    document.querySelector('#title-msg-error').innerHTML = ''
+    document.querySelector('#text-msg-error').innerHTML = '';
+}
+
+function verificaLogin() {
+    
 }
 
 function playMsc(status) {
