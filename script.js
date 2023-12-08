@@ -6,6 +6,7 @@ const input_user_pass = document.getElementById('input_user_pass');
 const win_select_world = document.getElementById('win_select_world');
 const win_last_login = document.getElementById('win_last_login');
 const block_message_login = document.getElementById('block_message_login');
+const win_confirm_exit = document.getElementById('win_confirm_exit');
 
 const block_login_form = document.getElementById('block_login_form');
 
@@ -58,16 +59,16 @@ function showLoginScreen() {
 function cmd(selected) {
     switch (selected) {
         case 'exitGame':
-            document.querySelector('#win_confirm_exit').style.zIndex = 1;
-            document.querySelector('#win_confirm_exit').classList.remove('hide');
+            win_confirm_exit.style.zIndex = 1;
+            win_confirm_exit.classList.remove('hide');
             break;
 
         case 'closeConfirmExit':
-            document.querySelector('#win_confirm_exit').classList.add('hide');
+            win_confirm_exit.classList.add('hide');
             break;
 
         case 'resetPage':
-            document.querySelector('#win_confirm_exit').classList.add('hide');
+            win_confirm_exit.classList.add('hide');
             location.replace(location.href);
             break;
 
@@ -85,11 +86,14 @@ function cmd(selected) {
             break;
 
         case 'fecharWinSelectWorld':
+            input_user_id.value = '';
+            input_user_pass.value = '';
             block_login.classList.remove('hide');
             block_news.classList.remove('hide');
             win_select_world.classList.add('hide');
             block_login.classList.add('fadeInAnim');
             block_news.classList.add('fadeInAnim');
+            input_user_id.focus();
             break;
 
         default:
@@ -126,6 +130,13 @@ function playMsc(status) {
     showLoginScreen();
 }
 
+function playbtnEffect() {
+    const effectGame = document.getElementById('effectGame');
+    effectGame.volume = 0.1;
+    effectGame.src = 'audio/login_button_click.mp3';
+    effectGame.play();
+}
+
 for (let btn = 0; btn < clickLBtnLogin.length; btn++) {
     clickLBtnLogin[btn].addEventListener('click', () => {
         const effectGame = document.getElementById('effectGame');
@@ -135,8 +146,16 @@ for (let btn = 0; btn < clickLBtnLogin.length; btn++) {
     });
 }
 
-function loginGame() {
-}
+input_user_id.onkeydown = function (e) {
+    if (e.key == "Enter") {
+        playbtnEffect();
+        verificaLogin();
+    }
+};
 
-function exitGame() {
-}
+input_user_pass.onkeydown = function (e) {
+    if (e.key == "Enter") {
+        playbtnEffect();
+        verificaLogin();
+    }
+};
