@@ -16,7 +16,7 @@
     <p>tap the screen to start</p>
   </div>
 
-  <div id="win-login" class="block_default block_login hide draggable">
+  <div id="win_login" class="block_default block_login hide draggable">
     <div class="default_header">
       <span class="orb_blue"></span> LogOn
     </div>
@@ -49,7 +49,7 @@
     </div>
   </div>
 
-  <div id="blc_last_login" class="block_default block_global_msg hide draggable">
+  <div id="win_last_login" class="block_default block_global_msg hide draggable">
     <div class="default_header">
       <span class="orb_blue"></span>
       <p>Mensagem</p>
@@ -65,14 +65,14 @@
     </div>
   </div>
 
-  <div id="blc_msg_error" class="block_default block_global_msg hide draggable">
+  <div id="win_msg_error" class="block_default block_global_msg hide draggable">
     <div class="default_header">
       <span class="orb_blue"></span>
-      <p id="title-msg-error"></p>
+      <p id="title_msg_error"></p>
     </div>
     <div class="default_body h_s">
       <div class="block_message">
-        <p id="text-msg-error"></p>
+        <p id="text_msg_error"></p>
       </div>
     </div>
     <div class="default_footer">
@@ -81,10 +81,10 @@
     </div>
   </div>
 
-  <div id="blc_select_world" class="block_default block_select_world hide draggable">
+  <div id="win_select_world" class="block_default block_select_world hide draggable">
     <div class="default_header">
       <span class="orb_blue"></span> Select world
-      <p id="title-msg-error"></p>
+      <p id="title_msg_error"></p>
     </div>
     <div class="default_body h_m">
       <div>
@@ -103,12 +103,12 @@
       </div>
     </div>
     <div class="default_footer">
-      <button class="btn btn_ok click-effect-login" onclick="cmd('fecharBlcMsgError')"></button>
-      <button class="btn btn_cancel click-effect-login" onclick="cmd('fecharBlcMsgError')"></button>
+      <button class="btn btn_ok click-effect-login" onclick="cmd('selectedUserWorld')"></button>
+      <button class="btn btn_cancel click-effect-login" onclick="cmd('fecharWinSelectWorld')"></button>
     </div>
   </div>
 
-  <div id="win-confirm-exit" class="block_default block_global_msg hide draggable">
+  <div id="win_confirm_exit" class="block_default block_global_msg hide draggable">
     <div class="default_header">
       <span class="orb_blue"></span>
       <p>Mensagem</p>
@@ -148,6 +148,7 @@
 
   <script src="script.js"></script>
   <script src="script-drag.js"></script>
+  <script src="login.js"></script>
 </body>
 
 </html>

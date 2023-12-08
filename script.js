@@ -1,13 +1,22 @@
 
 
-const inputId = document.getElementById('input_user_id');
-const inputPass = document.getElementById('input_user_pass');
+const input_user_id = document.getElementById('input_user_id');
+const input_user_pass = document.getElementById('input_user_pass');
+
+const win_select_world = document.getElementById('win_select_world');
+const win_last_login = document.getElementById('win_last_login');
+const block_message_login = document.getElementById('block_message_login');
+
+const block_login_form = document.getElementById('block_login_form');
+
+const win_msg_error = document.getElementById('win_msg_error');
+const title_msg_error = document.getElementById('title_msg_error');
+const text_msg_error = document.getElementById('text_msg_error');
+
 const clickLBtnLogin = document.querySelectorAll('.click-effect-login');
 
 const block_login = document.querySelector('.block_login');
 const block_news = document.querySelector('.block_news');
-
-const b = document.querySelector('body');
 
 var music_temp = '';
 var effect_temp = '';
@@ -15,11 +24,11 @@ var effect_temp = '';
 function clickInput(type) {
     switch (type) {
         case 'id':
-            inputId.focus();
+            input_user_id.focus();
             break;
 
         case 'pass':
-            inputPass.focus();
+            input_user_pass.focus();
             break;
 
         default:
@@ -39,7 +48,7 @@ function showLoginScreen() {
                 block_news.classList.remove('hide');
                 block_login.classList.add('fadeInAnim');
                 block_news.classList.add('fadeInAnim');
-                inputId.focus();
+                input_user_id.focus();
                 black_screen.style.display = "none";
             });
         }, 1000
@@ -49,35 +58,38 @@ function showLoginScreen() {
 function cmd(selected) {
     switch (selected) {
         case 'exitGame':
-            document.querySelector('#win-confirm-exit').style.zIndex = 1;
-            document.querySelector('#win-confirm-exit').classList.remove('hide');
+            document.querySelector('#win_confirm_exit').style.zIndex = 1;
+            document.querySelector('#win_confirm_exit').classList.remove('hide');
             break;
 
         case 'closeConfirmExit':
-            document.querySelector('#win-confirm-exit').classList.add('hide');
+            document.querySelector('#win_confirm_exit').classList.add('hide');
             break;
 
         case 'resetPage':
-            document.querySelector('#win-confirm-exit').classList.add('hide');
+            document.querySelector('#win_confirm_exit').classList.add('hide');
             location.replace(location.href);
             break;
 
         case 'loginGame':
-            if (inputId.value !== '' || inputPass.value !== '') {
+            if (input_user_id.value !== '' || input_user_pass.value !== '') {
                 verificaLogin();
             } else {
-                document.querySelector('#blc_msg_error').style.zIndex = 1;
-                document.querySelector('#blc_msg_error').classList.remove('hide');
-                document.querySelector('#title-msg-error').innerHTML = 'Mensagem'
-                document.querySelector('#text-msg-error').innerHTML = 'Usuário ou senha incorretos. Por favor, tente novamente';
-                document.querySelector('#block_message_login').classList.remove('hide');
-                document.querySelector('#block_login_form').classList.add('hide');
+                invalidLogin();
             }
             break;
 
         case 'fecharBlcMsgError':
             resetMsgError();
-            inputId.focus();
+            input_user_id.focus();
+            break;
+
+        case 'fecharWinSelectWorld':
+            block_login.classList.remove('hide');
+            block_news.classList.remove('hide');
+            win_select_world.classList.add('hide');
+            block_login.classList.add('fadeInAnim');
+            block_news.classList.add('fadeInAnim');
             break;
 
         default:
@@ -85,16 +97,22 @@ function cmd(selected) {
     }
 }
 
-function resetMsgError() {
-    document.querySelector('#blc_msg_error').classList.add('hide');
-    document.querySelector('#block_message_login').classList.add('hide');
-    document.querySelector('#block_login_form').classList.remove('hide');
-    document.querySelector('#title-msg-error').innerHTML = ''
-    document.querySelector('#text-msg-error').innerHTML = '';
+function invalidLogin() {
+    win_msg_error.style.zIndex = 1;
+    win_msg_error.classList.remove('hide');
+    title_msg_error.innerHTML = 'Mensagem'
+    text_msg_error.innerHTML = 'Usuário ou senha incorretos. Por favor, tente novamente';
+    block_message_login.classList.remove('hide');
+    block_login_form.classList.add('hide');
+    input_user_pass.value = '';
 }
 
-function verificaLogin() {
-    
+function resetMsgError() {
+    win_msg_error.classList.add('hide');
+    block_message_login.classList.add('hide');
+    block_login_form.classList.remove('hide');
+    title_msg_error.innerHTML = ''
+    text_msg_error.innerHTML = '';
 }
 
 function playMsc(status) {
