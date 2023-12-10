@@ -7,6 +7,8 @@ const win_select_world = document.getElementById('win_select_world');
 const win_last_login = document.getElementById('win_last_login');
 const block_message_login = document.getElementById('block_message_login');
 const win_confirm_exit = document.getElementById('win_confirm_exit');
+const win_select_player = document.getElementById('win_select_player');
+
 
 const block_login_form = document.getElementById('block_login_form');
 
@@ -94,6 +96,10 @@ function cmd(selected) {
             block_login.classList.add('fadeInAnim');
             block_news.classList.add('fadeInAnim');
             input_user_id.focus();
+            break;
+
+            case 'fecharSelectPlayer':
+                win_select_player.classList.add('hide');
             break;
 
         default:
