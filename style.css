@@ -87,8 +87,6 @@ body {
 /* ------------------------------ */
 /* ------- JANELA DEFAULT ------- */
 /* ------------------------------ */
-
-
 .block_message {
     display: flex;
     padding: 5px 20px;
@@ -138,7 +136,7 @@ body {
     border-radius: 5px;
 }
 
-.block_select_char {
+.block_select_player {
     width: 100%;
     max-width: 700px;
     height: auto;
@@ -202,11 +200,11 @@ body {
 }
 
 .h_xl {
-    height: 500px !important;
+    height: 450px !important;
 }
 
 .h_xxl {
-    height: 625px !important;
+    height: 525px !important;
 }
 
 .block_login {
@@ -313,9 +311,8 @@ body {
 }
 
 /* ------------------------------ */
-/* ------- SELECT DEFAULT ------- */
+/* ------ SELECT W DEFAULT ------ */
 /* ------------------------------ */
-
 .selectAlt {
     display: flex;
     position: relative;
@@ -376,4 +373,92 @@ body {
     left: 9px;
     width: 8px;
     height: 8px;
+}
+
+/* ------------------------------ */
+/* ---- SELECT CHAR DEFAULT ----- */
+/* ------------------------------ */
+.carousel_chars {
+    display: flex;
+    background: #fff;
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    align-items: center;
+    margin: 30px 0 0 0;
+}
+
+.page_slots {
+    display: flex;
+    background: #fff;
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+.char_slot {
+    display: flex;
+    background: #fff;
+    border: 3px solid #dbdfe2;
+    width: 190px;
+    height: 215px;
+    border-radius: 5px;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: flex-end;
+    align-content: center;
+    padding: 0 0 30px 0;
+}
+
+.char_slot:active, .char_slot:focus {
+    border: 8px solid #7b94cd;
+}
+
+.arrow_l {
+    background-image: url(img/arrow_default.png);
+    transform: rotate(180deg);
+    background-repeat: no-repeat;
+    background-position: 100%;
+    background-size: 100%;
+    width: 18px;
+    height: 20px;
+    margin: 0 0 0 20px;
+}
+
+.arrow_r {
+    background-image: url(img/arrow_default.png);
+    transform: rotate(0deg);
+    background-repeat: no-repeat;
+    background-position: 100%;
+    background-size: cover;
+    width: 18px;
+    height: 20px;
+    margin: 0 20px 0 0;
+}
+
+.empty {
+    background-color: #00000061;
+    width: 50px;
+    height: 50px;
+    display: inline-flex;
+    border-radius: 25px;
+    transform: rotateX(45deg);
+    -webkit-box-shadow: 0px 0px 30px 5px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 30px 5px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 30px 5px rgba(0,0,0,0.75);
+}
+
+.total_pages_count {
+    color: #525252;
+    font-family: cursive;
+    font-size: 12px;
+    padding: 0;
+    margin: 10px 0 0 0;
 }

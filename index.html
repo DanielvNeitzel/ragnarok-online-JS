@@ -13,7 +13,7 @@
 <body onclick="playMsc('music_login');">
 
   <div class="black_screen">
-    <p>tap the screen to start</p>
+    <p>toque na tela para começar</p>
   </div>
 
   <div id="win_login" class="block_default block_login hide draggable">
@@ -24,7 +24,7 @@
       <div id="block_login_form" class="block_login_form">
         <div class="row">
           <div>
-            <h1 class="text-input">ID</h1>
+            <h1 class="text-input">Usuário</h1>
           </div>
           <div>
             <input onclick="clickInput('id')" type="text" name="input_user_id" id="input_user_id">
@@ -32,7 +32,7 @@
         </div>
         <div class="row">
           <div>
-            <h1 class="text-input">Password</h1>
+            <h1 class="text-input">Senha</h1>
           </div>
           <div>
             <input onclick="clickInput('pass')" type="password" name="input_user_pass" id="input_user_pass">
@@ -65,6 +65,29 @@
     </div>
   </div>
 
+  <div id="win_select_player" class="block_default block_select_player hide">
+    <div class="default_header">
+      <span class="orb_blue"></span>
+      <p>Seleção de personagens</p>
+    </div>
+    <div class="default_body h_xl">
+      <div class="carousel_chars">
+        <span class="arrow_l"></span>
+        <ul class="page_slots">
+          <button id="slot_1" class="char_slot"><span class="empty"></span></button>
+          <button id="slot_2" class="char_slot"><span class="empty"></span></button>
+          <button id="slot_3" class="char_slot"><span class="empty"></span></button>
+        </ul>
+        <span class="arrow_r"></span>
+      </div>
+      <h3 class="total_pages_count">1 / 1</h3>
+    </div>
+    <div class="default_footer">
+      <button class="btn btn_ok click-effect-login" onclick="cmd('fecharBlcLastLogin')"></button>
+      <button class="btn btn_cancel click-effect-login" onclick="cmd('fecharSelectPlayer')"></button>
+    </div>
+  </div>
+
   <div id="win_msg_error" class="block_default block_global_msg hide draggable">
     <div class="default_header">
       <span class="orb_blue"></span>
@@ -89,15 +112,21 @@
     <div class="default_body h_m">
       <div>
         <label class="selectAlt click-effect-login">odin
-          <input type="radio" checked="checked" name="radio">
+          <input type="radio" checked="checked" name="radio" value="premium">
           <span class="checkmark">
-            <span></span> Odin (0)
+            <span></span> Servidor Premium
           </span>
         </label>
         <label class="selectAlt click-effect-login">thor
-          <input type="radio" name="radio">
+          <input type="radio" name="radio" value="gratuito">
           <span class="checkmark">
-            <span></span> Thor (0)
+            <span></span> Servidor de Acesso Gratuito
+          </span>
+        </label>
+        <label class="selectAlt click-effect-login">thor
+          <input type="radio" name="radio" value="especial">
+          <span class="checkmark">
+            <span></span> Servidor de Acesso Especial
           </span>
         </label>
       </div>
@@ -127,11 +156,12 @@
   <div class="block_default block_news hide">
     <div class="default_header">
       <span class="orb_blue"></span>
-      <p>Mensagem</p>
+      <p>Noticias / Eventos</p>
     </div>
     <div class="default_body h_s">
       <div class="h-100 flex-v-center">
         <h1>Servidor de Ragnarok JS</h1>
+        <h3>Desenvolvido por Daniel Neitzel</h3>
       </div>
     </div>
   </div>
