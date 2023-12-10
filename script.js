@@ -76,7 +76,7 @@ function cmd(selected) {
 
         case 'loginGame':
             if (input_user_id.value !== '' || input_user_pass.value !== '') {
-                verificaLogin();
+                verifyLogin();
             } else {
                 invalidLogin();
             }
@@ -100,6 +100,10 @@ function cmd(selected) {
 
             case 'fecharSelectPlayer':
                 win_select_player.classList.add('hide');
+            break;
+
+            case 'selectedUserWorld':
+                verifyWorld();
             break;
 
         default:
@@ -155,13 +159,13 @@ for (let btn = 0; btn < clickLBtnLogin.length; btn++) {
 input_user_id.onkeydown = function (e) {
     if (e.key == "Enter") {
         playbtnEffect();
-        verificaLogin();
+        verifyLogin();
     }
 };
 
 input_user_pass.onkeydown = function (e) {
     if (e.key == "Enter") {
         playbtnEffect();
-        verificaLogin();
+        verifyLogin();
     }
 };
