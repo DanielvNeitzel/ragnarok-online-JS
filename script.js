@@ -9,12 +9,13 @@ const block_message_login = document.getElementById('block_message_login');
 const win_confirm_exit = document.getElementById('win_confirm_exit');
 const win_select_player = document.getElementById('win_select_player');
 
-
 const block_login_form = document.getElementById('block_login_form');
 
 const win_msg_error = document.getElementById('win_msg_error');
 const title_msg_error = document.getElementById('title_msg_error');
 const text_msg_error = document.getElementById('text_msg_error');
+
+const char_slot = document.querySelectorAll('.char_slot');
 
 const clickLBtnLogin = document.querySelectorAll('.click-effect-login');
 
@@ -98,17 +99,30 @@ function cmd(selected) {
             input_user_id.focus();
             break;
 
-            case 'fecharSelectPlayer':
-                win_select_player.classList.add('hide');
+        case 'fecharSelectPlayer':
+            win_select_world.classList.remove('hide');
+            win_select_player.classList.add('hide');
             break;
 
-            case 'selectedUserWorld':
-                verifyWorld();
+        case 'selectedUserWorld':
+            const worldstatus = verifyWorld();
+            console.log(worldstatus);
+            win_select_world.classList.add('hide');
+            win_select_player.style.zIndex = 1;
+            win_select_player.classList.remove('hide');
             break;
 
         default:
             break;
     }
+}
+
+function selectChar(selected) {
+    for (let slot = 0; slot < char_slot.length; slot++) {
+        char_slot[slot].classList.remove('active');
+    }
+    selected.classList.add('active');
+    console.log(selected.id);
 }
 
 function invalidLogin() {

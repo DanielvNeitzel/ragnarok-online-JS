@@ -417,7 +417,7 @@ body {
     padding: 0 0 30px 0;
 }
 
-.char_slot:active, .char_slot:focus {
+.active {
     border: 8px solid #7b94cd;
 }
 
@@ -461,4 +461,42 @@ body {
     font-size: 12px;
     padding: 0;
     margin: 10px 0 0 0;
+}
+
+.char_info {
+    display: flex;
+    flex-direction: row;
+}
+
+.char_info ul {
+    width: 149px;
+    list-style: none;
+    text-align: left;
+    background-color: #c8cce6;
+    color: #13274b;
+    font-size:13px;
+    margin: 0 0 0 0;
+    padding: 0 15px 0 0;
+    font-weight: 700;
+}
+
+.char_info ul li {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.char_info span {
+    display: flex;
+    width: 75%;
+    background-color: #0021fb;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
 }
