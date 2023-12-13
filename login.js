@@ -45,7 +45,7 @@ function verifyWorld() {
   });
 
   if (validWorld) {
-    console.log(res);
+    return res
   } else {
     win_msg_error.style.zIndex = 2;
     win_msg_error.classList.remove('hide');

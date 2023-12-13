@@ -65,7 +65,7 @@
     </div>
   </div>
 
-  <div id="win_select_player" class="block_default block_select_player hide">
+  <div id="win_select_player" class="block_default block_select_player">
     <div class="default_header">
       <span class="orb_blue"></span>
       <p>Seleção de personagens</p>
@@ -74,13 +74,31 @@
       <div class="carousel_chars">
         <span class="arrow_l"></span>
         <ul class="page_slots">
-          <button id="slot_1" class="char_slot"><span class="empty"></span></button>
-          <button id="slot_2" class="char_slot"><span class="empty"></span></button>
-          <button id="slot_3" class="char_slot"><span class="empty"></span></button>
+          <button id="slot_1" onclick="selectChar(this)" class="char_slot"><span class="empty"></span></button>
+          <button id="slot_2" onclick="selectChar(this)" class="char_slot"><span class="empty"></span></button>
+          <button id="slot_3" onclick="selectChar(this)" class="char_slot"><span class="empty"></span></button>
         </ul>
         <span class="arrow_r"></span>
       </div>
       <h3 class="total_pages_count">1 / 1</h3>
+      <div class="char_info">
+        <ul>
+          <li>Nome <span>-</span></li>
+          <li>Classe <span>-</span></li>
+          <li>Nv. <span>-</span></li>
+          <li>EXP <span>-</span></li>
+          <li>HP <span>-</span></li>
+          <li>SP <span>-</span></li>
+        </ul>
+        <ul>
+          <li>FOR <span>-</span></li>
+          <li>AGI <span>-</span></li>
+          <li>VIT <span>-</span></li>
+          <li>INT <span>-</span></li>
+          <li>DES <span>-</span></li>
+          <li>SOR <span>-</span></li>
+        </ul>
+      </div>
     </div>
     <div class="default_footer">
       <button class="btn btn_ok click-effect-login" onclick="cmd('fecharBlcLastLogin')"></button>
