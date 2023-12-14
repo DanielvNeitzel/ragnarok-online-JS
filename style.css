@@ -469,34 +469,42 @@ body {
 }
 
 .char_info ul {
-    width: 149px;
+    width: 150px;
     list-style: none;
     text-align: left;
-    background-color: #c8cce6;
-    color: #13274b;
-    font-size:13px;
     margin: 0 0 0 0;
-    padding: 0 15px 0 0;
-    font-weight: 700;
+    padding: 0;
+    font-weight: 800;
 }
 
 .char_info ul li {
     display: flex;
     width: 100%;
     flex-direction: row;
+    background-color: #c8cce6;
+    color: #3a4566;
+    font-family: revert;
+    font-size: 13px;
     flex-wrap: nowrap;
     align-content: center;
     justify-content: space-between;
     align-items: center;
+    padding: 0 0px 0 5px;
+    margin: 0px 0 1px 20px;
 }
 
 .char_info span {
     display: flex;
-    width: 75%;
-    background-color: #0021fb;
+    height: 18px;
+    width: 100px;
+    background-color: #edf0f8;
+    color: #000000;
+    font-family: system-ui;
+    font-size: 11px;
+    font-weight: 400;
     flex-direction: row;
     flex-wrap: nowrap;
     align-content: center;
-    justify-content: center;
     align-items: center;
+    padding: 0 0 0 3px;
 }
