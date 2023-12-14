@@ -7,6 +7,34 @@
       "slots": [
         {
           "stats": "active",
+          "Nome": "Admin",
+          "class": "God",
+          "level": 99,
+          "experience": 999999999,
+          "hp": 999999,
+          "sp": 999999,
+          "for": 999,
+          "agi": 999,
+          "vit": 999,
+          "int": 999,
+          "des": 999,
+          "sor": 999
+        },
+        {
+          "stats": "empty"
+        },
+        {
+          "stats": "empty"
+        }
+      ]
+    },
+    {
+      "username": "teste",
+      "password": "teste",
+      "auth_server": "premium",
+      "slots": [
+        {
+          "stats": "active",
           "Nome": "Teste",
           "class": "Aprendiz",
           "level": 1,
