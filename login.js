@@ -1,5 +1,11 @@
-var data;
 var xhr = new XMLHttpRequest();
+var data;
+var userData;
+var username;
+var password;
+var res;
+
+userRequest();
 
 function userRequest() {
   xhr.onreadystatechange = function () {
@@ -7,57 +13,56 @@ function userRequest() {
       data = JSON.parse(xhr.responseText);
     }
   }
+  xhr.open("GET", "users.json", true);
+  xhr.send();
+}
+
+function findUserObject(obj, username) {
+  for (const key in obj) {
+    if (Array.isArray(obj[key])) {
+      const userObject = obj[key].find(item => item.hasOwnProperty(username));
+      if (userObject) {
+        return userObject[username];
+      }
+    }
+  }
+  return null;
 }
 
 function verifyLogin() {
-  var username = document.getElementById("input_user_id").value;
-  var password = document.getElementById("input_user_pass").value;
-
-  userRequest();
-
-  if(data) {
-    var validUser = data.users.find(function (user) {
-      return user.username === username && user.password === password;
-    });
-
-    if (validUser) {
+  username = document.getElementById("input_user_id").value;
+  password = document.getElementById("input_user_pass").value;
+  userData = findUserObject(data, username);
+  if (userData) {
+    if (userData[0].password === password) {
       conSuccess();
     } else {
       invalidLogin();
     }
   }
-
-  xhr.open("GET", "users.json", true);
-  xhr.send();
 }
 
 function verifyWorld() {
-  var res = '';
   const items = document.getElementsByName('world');
   for (var i = 0; i < items.length; i++) {
     if (items[i].checked) {
-      res = items[i].value
+      resp = items[i].value
       break;
     }
-  }  
-  var validWorld = data.users.find(function (user) {
-    return user.auth_server === res
-  });
+  }
 
-  if (validWorld) {
-    return res
-  } else {
-    win_msg_error.style.zIndex = 2;
-    win_msg_error.classList.remove('hide');
-    title_msg_error.innerHTML = 'Mensagem'
-    text_msg_error.innerHTML = 'Você não tem permissão pra entrar nesse mundo.';
+  if (userData) {
+    var validWorld = userData[0].auth_server === resp
+    if (validWorld !== undefined) {
+      return validWorld;
+    }else {
+      return "data error";
+    }
   }
 }
 
-function conSuccess() {
-  console.log('usuario validado com sucesso.');
-  win_msg_error.classList.add('hide');
-  win_login.classList.add('hide');
-  win_select_world.classList.remove('hide');
-  win_select_world.classList.add('fadeInAnim');
+function loadCharSelected(id) {
+  if(userData[0].slots[0]){
+    
+  }
 }
