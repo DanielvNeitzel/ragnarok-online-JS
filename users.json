@@ -1,58 +1,66 @@
 {
   "users": [
     {
-      "username": "admin",
-      "password": "admin",
-      "auth_server": "gratuito",
-      "slots": [
+      "admin": [
         {
-          "stats": "active",
-          "Nome": "Admin",
-          "class": "God",
-          "level": 99,
-          "experience": 999999999,
-          "hp": 999999,
-          "sp": 999999,
-          "for": 999,
-          "agi": 999,
-          "vit": 999,
-          "int": 999,
-          "des": 999,
-          "sor": 999
-        },
-        {
-          "stats": "empty"
-        },
-        {
-          "stats": "empty"
+          "username": "admin",
+          "password": "admin",
+          "auth_server": "gratuito",
+          "slots": [
+            {
+              "stats": "active",
+              "Nome": "admin",
+              "skin": "char-1",
+              "class": "Aprendiz",
+              "level": 1,
+              "experience": 0,
+              "hp": 100,
+              "sp": 100,
+              "for": 1,
+              "agi": 1,
+              "vit": 1,
+              "int": 1,
+              "des": 1,
+              "sor": 1
+            },
+            {
+              "stats": "empty"
+            },
+            {
+              "stats": "empty"
+            }
+          ]
         }
-      ]
-    },
-    {
-      "username": "teste",
-      "password": "teste",
-      "auth_server": "premium",
-      "slots": [
+      ],
+      "teste": [
         {
-          "stats": "active",
-          "Nome": "Teste",
-          "class": "Aprendiz",
-          "level": 1,
-          "experience": 0,
-          "hp": 100,
-          "sp": 100,
-          "for": 1,
-          "agi": 1,
-          "vit": 1,
-          "int": 1,
-          "des": 1,
-          "sor": 1
-        },
-        {
-          "stats": "empty"
-        },
-        {
-          "stats": "empty"
+          "username": "teste",
+          "password": "teste",
+          "auth_server": "premium",
+          "slots": [
+            {
+              "stats": "active",
+              "Nome": "Testando",
+              "skin": "char-1",
+              "class": "Aprendiz",
+              "level": 1,
+              "experience": 0,
+              "hp": 100,
+              "sp": 100,
+              "for": 1,
+              "agi": 1,
+              "vit": 1,
+              "int": 1,
+              "des": 1,
+              "sor": 1
+            },
+            {
+              "stats": "empty"
+            },
+            {
+              "stats": "empty"
+            }
+          ]
         }
       ]
     }

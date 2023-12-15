@@ -107,14 +107,29 @@ function cmd(selected) {
         case 'selectedUserWorld':
             const worldstatus = verifyWorld();
             console.log(worldstatus);
-            win_select_world.classList.add('hide');
-            win_select_player.style.zIndex = 1;
-            win_select_player.classList.remove('hide');
+            if (worldstatus === true) {
+                win_select_world.classList.add('hide');
+                win_select_player.style.zIndex = 1;
+                win_select_player.classList.remove('hide');
+            } else {
+                win_msg_error.style.zIndex = 2;
+                win_msg_error.classList.remove('hide');
+                title_msg_error.innerHTML = 'Mensagem';
+                text_msg_error.innerHTML = 'Você não tem permissão pra entrar nesse mundo.';
+            }
             break;
 
         default:
             break;
     }
+}
+
+function conSuccess() {
+    console.log('usuario validado com sucesso.');
+    win_msg_error.classList.add('hide');
+    win_login.classList.add('hide');
+    win_select_world.classList.remove('hide');
+    win_select_world.classList.add('fadeInAnim');
 }
 
 function selectChar(selected) {
@@ -123,6 +138,7 @@ function selectChar(selected) {
     }
     selected.classList.add('active');
     console.log(selected.id);
+    loadCharSelected(selected.id);
 }
 
 function invalidLogin() {
@@ -143,13 +159,22 @@ function resetMsgError() {
     text_msg_error.innerHTML = '';
 }
 
+function genericMsgError() {
+    win_msg_error.style.zIndex = 1;
+    win_msg_error.classList.add('hide');
+    block_message_login.classList.add('hide');
+    block_login_form.classList.remove('hide');
+    title_msg_error.innerHTML = 'Message';
+    text_msg_error.innerHTML = 'Não foi possível conectar-se ao servidor.';
+}
+
 function playMsc(status) {
     if (music_temp !== 'music_login') {
-        const soundGame = document.getElementById('musicGame');
-        soundGame.volume = 0.1;
-        soundGame.src = 'audio/login_sound.mp3';
-        soundGame.play();
-        music_temp = status;
+        // const soundGame = document.getElementById('musicGame');
+        // soundGame.volume = 0.1;
+        // soundGame.src = 'audio/login_sound.mp3';
+        // soundGame.play();
+        // music_temp = status;
     }
     showLoginScreen();
 }
