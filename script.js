@@ -108,6 +108,7 @@ function cmd(selected) {
             const worldstatus = verifyWorld();
             console.log(worldstatus);
             if (worldstatus === true) {
+                loadCharSlots();
                 win_select_world.classList.add('hide');
                 win_select_player.style.zIndex = 1;
                 win_select_player.classList.remove('hide');
@@ -170,11 +171,11 @@ function genericMsgError() {
 
 function playMsc(status) {
     if (music_temp !== 'music_login') {
-        const soundGame = document.getElementById('musicGame');
-        soundGame.volume = 0.1;
-        soundGame.src = 'audio/login_sound.mp3';
-        soundGame.play();
-        music_temp = status;
+        // const soundGame = document.getElementById('musicGame');
+        // soundGame.volume = 0.1;
+        // soundGame.src = 'audio/login_sound.mp3';
+        // soundGame.play();
+        // music_temp = status;
     }
     showLoginScreen();
 }

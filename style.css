@@ -409,10 +409,10 @@ body {
     width: 190px;
     height: 215px;
     border-radius: 5px;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: nowrap;
     justify-content: center;
-    align-items: flex-end;
+    align-items: center;
     align-content: center;
     padding: 0 0 30px 0;
 }
@@ -444,15 +444,17 @@ body {
 }
 
 .empty {
+    position: absolute;
+    bottom: 292px;
     background-color: #00000061;
-    width: 50px;
-    height: 50px;
+    width: 35px;
+    height: 45px;
     display: inline-flex;
     border-radius: 25px;
-    transform: rotateX(45deg);
+    transform: rotateX(132deg);
     -webkit-box-shadow: 0px 0px 30px 5px rgba(0,0,0,0.75);
     -moz-box-shadow: 0px 0px 30px 5px rgba(0,0,0,0.75);
-    box-shadow: 0px 0px 30px 5px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 30px 5px rgb(0 0 0 / 75%);
 }
 
 .total_pages_count {

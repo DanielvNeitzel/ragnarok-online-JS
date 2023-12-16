@@ -9,8 +9,8 @@
           "slots": [
             {
               "stats": "active",
-              "Nome": "admin",
-              "skin": "char-1",
+              "name": "admin",
+              "hair": "aprendiz_1",
               "class": "Aprendiz",
               "level": 1,
               "experience": 0,
@@ -24,7 +24,20 @@
               "sor": 1
             },
             {
-              "stats": "empty"
+              "stats": "active",
+              "name": "admin2",
+              "hair": "aprendiz_2",
+              "class": "Aprendiz",
+              "level": 5,
+              "experience": 0,
+              "hp": 100,
+              "sp": 100,
+              "for": 1,
+              "agi": 1,
+              "vit": 1,
+              "int": 1,
+              "des": 1,
+              "sor": 1
             },
             {
               "stats": "empty"
@@ -40,8 +53,8 @@
           "slots": [
             {
               "stats": "active",
-              "Nome": "Testando",
-              "skin": "char-1",
+              "name": "Testando",
+              "hair": "aprendiz_2",
               "class": "Aprendiz",
               "level": 1,
               "experience": 0,
