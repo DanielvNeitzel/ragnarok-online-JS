@@ -80,6 +80,9 @@ function verifyWorld() {
 }
 
 function loadCharSlots() {
+  imgChar_1.src = '';
+  imgChar_2.src = '';
+  imgChar_3.src = '';
   for (let slot = 0; slot < userData[0].slots.length; slot++) {
     if (userData[0].slots[slot].stats === 'active') {
       const skin = userData[0].slots[slot].hair;
