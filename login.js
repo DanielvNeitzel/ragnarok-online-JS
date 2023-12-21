@@ -17,6 +17,7 @@ var imgChar_2 = document.getElementById("imgChar_2");
 var imgChar_3 = document.getElementById("imgChar_3");
 
 var xhr = new XMLHttpRequest();
+var num_char = 0;
 var data;
 var userData;
 var username;
@@ -86,6 +87,8 @@ function loadCharSlots() {
   for (let slot = 0; slot < userData[0].slots.length; slot++) {
     if (userData[0].slots[slot].stats === 'active') {
       const skin = userData[0].slots[slot].hair;
+      num_char++;
+      block_charactor.innerHTML = num_char + ' / 3';
       switch (slot) {
         case 0:
           imgChar_1.src = 'img/chars/' + skin + '.png'

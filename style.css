@@ -497,16 +497,45 @@ body {
 
 .char_info span {
     display: flex;
-    height: 18px;
+    height: 22px;
     width: 100px;
     background-color: #edf0f8;
     color: #000000;
     font-family: system-ui;
-    font-size: 11px;
-    font-weight: 400;
+    font-size: 12px;
+    font-weight: 600;
     flex-direction: row;
     flex-wrap: nowrap;
     align-content: center;
     align-items: center;
-    padding: 0 0 0 3px;
+    padding: 0 0 0 8px;
+}
+
+.total_slot_count {
+    display: flex;
+    flex-direction: row;
+    align-content: flex-start;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin: 5px 20px 0px;
+}
+
+.block_charactor {
+    display: inline-flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    border: 1px solid #dbdfe2;
+    padding: 5px 25px;
+    font-size: 13px;
+    border-radius: 5px;
+}
+
+.block_charactor span:first-child {
+    padding: 0 15px 0 0;
+    font-weight: bold;
+    color: #475880;
 }

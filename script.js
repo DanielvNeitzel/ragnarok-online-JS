@@ -19,6 +19,7 @@ const char_slot = document.querySelectorAll('.char_slot');
 
 const clickLBtnLogin = document.querySelectorAll('.click-effect-login');
 
+const block_charactor = document.querySelector('.block_charactor span');
 const block_login = document.querySelector('.block_login');
 const block_news = document.querySelector('.block_news');
 

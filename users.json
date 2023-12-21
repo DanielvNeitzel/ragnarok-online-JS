@@ -12,32 +12,19 @@
               "name": "admin",
               "hair": "aprendiz_1",
               "class": "Aprendiz",
-              "level": 1,
-              "experience": 0,
-              "hp": 100,
-              "sp": 100,
-              "for": 1,
-              "agi": 1,
-              "vit": 1,
-              "int": 1,
-              "des": 1,
-              "sor": 1
+              "level": 99,
+              "experience": 999999999,
+              "hp": 99999,
+              "sp": 99999,
+              "for": 99,
+              "agi": 99,
+              "vit": 99,
+              "int": 99,
+              "des": 99,
+              "sor": 99
             },
             {
-              "stats": "active",
-              "name": "admin2",
-              "hair": "aprendiz_2",
-              "class": "Aprendiz",
-              "level": 5,
-              "experience": 0,
-              "hp": 100,
-              "sp": 100,
-              "for": 1,
-              "agi": 1,
-              "vit": 1,
-              "int": 1,
-              "des": 1,
-              "sor": 1
+              "stats": "empty"
             },
             {
               "stats": "empty"
