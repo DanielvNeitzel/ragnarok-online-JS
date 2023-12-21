@@ -1,4 +1,5 @@
 
+var docElem = document.documentElement;
 
 const input_user_id = document.getElementById('input_user_id');
 const input_user_pass = document.getElementById('input_user_pass');
@@ -16,6 +17,8 @@ const title_msg_error = document.getElementById('title_msg_error');
 const text_msg_error = document.getElementById('text_msg_error');
 
 const char_slot = document.querySelectorAll('.char_slot');
+
+const loading_screen = document.getElementById('loading_screen');
 
 const clickLBtnLogin = document.querySelectorAll('.click-effect-login');
 
@@ -121,6 +124,11 @@ function cmd(selected) {
             }
             break;
 
+        case 'selectedPlayerChar':
+            loadingScreen();
+            // loadPlayerInfo();
+            break;
+
         default:
             break;
     }
@@ -210,3 +218,42 @@ input_user_pass.onkeydown = function (e) {
         verifyLogin();
     }
 };
+
+
+function Fullscreen(stats) {
+    if (stats === 'on') {
+        if (docElem.requestFullscreen) {
+            docElem.requestFullscreen();
+        } else if (docElem.webkitRequestFullscreen) { /* Safari */
+            docElem.webkitRequestFullscreen();
+        } else if (docElem.msRequestFullscreen) { /* IE11 */
+            docElem.msRequestFullscreen();
+        }
+    } else {
+        if (document.exitFullscreen) {
+            document.exitFullscreen();
+        } else if (document.webkitExitFullscreen) { /* Safari */
+            document.webkitExitFullscreen();
+        } else if (document.msExitFullscreen) { /* IE11 */
+            document.msExitFullscreen();
+        }
+    }
+}
+
+function loadingScreen() {
+    loading_screen.classList.remove('hide');
+    var loadBar = document.getElementById("loadBar");
+    var elem2 = document.getElementById("loadNum");
+    var width = 0;
+    var id = setInterval(frame, 50);
+    function frame() {
+        if (width >= 100) {
+            clearInterval(id);
+            loading_screen.classList.add('hide');
+        } else {
+            width++;
+            loadBar.style.width = width + '%';
+            elem2.innerHTML = width * 1 + '%';
+        }
+    }
+}

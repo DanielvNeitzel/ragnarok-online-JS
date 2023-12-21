@@ -18,6 +18,7 @@ var imgChar_3 = document.getElementById("imgChar_3");
 
 var xhr = new XMLHttpRequest();
 var num_char = 0;
+var slot_num = 0;
 var data;
 var userData;
 var username;
@@ -85,6 +86,9 @@ function loadCharSlots() {
   imgChar_2.src = '';
   imgChar_3.src = '';
   for (let slot = 0; slot < userData[0].slots.length; slot++) {
+    num_char = 0;
+    char_slot[0].classList.add('active');
+    updateStatsValue(userData[0].slots[0])
     if (userData[0].slots[slot].stats === 'active') {
       const skin = userData[0].slots[slot].hair;
       num_char++;
@@ -158,5 +162,56 @@ function updateStatsValue(userDataSlot) {
     SelectedUserInt.innerHTML = '';
     SelectedUserDes.innerHTML = '';
     SelectedUserSor.innerHTML = '';
+  }
+}
+
+function changeChar(opt) {
+  if (opt === 'next') {
+    switch (slot_num) {
+      case 0:
+        char_slot[0].classList.remove('active');
+        char_slot[1].classList.add('active');
+        slot_num = 1;
+        updateStatsValue(userData[0].slots[1]);
+        break;
+
+      case 1:
+        char_slot[1].classList.remove('active');
+        char_slot[2].classList.add('active');
+        slot_num = 2;
+        updateStatsValue(userData[0].slots[2]);
+        break;
+
+      case 2:
+        char_slot[2].classList.remove('active');
+        char_slot[0].classList.add('active');
+        slot_num = 0;
+        updateStatsValue(userData[0].slots[0]);
+        break;
+    }
+  }
+  if (opt === 'prev') {
+    switch (slot_num) {
+      case 0:
+        char_slot[0].classList.remove('active');
+        char_slot[2].classList.add('active');
+        slot_num = 2;
+        updateStatsValue(userData[0].slots[2]);
+        break;
+
+      case 1:
+        char_slot[1].classList.remove('active');
+        char_slot[0].classList.add('active');
+        slot_num = 0;
+        updateStatsValue(userData[0].slots[0]);
+        break;
+
+      case 2:
+        char_slot[2].classList.remove('active');
+        char_slot[1].classList.add('active');
+        slot_num = 1;
+        updateStatsValue(userData[0].slots[1]);
+        break;
+    }
   }
 }

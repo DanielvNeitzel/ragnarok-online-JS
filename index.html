@@ -12,6 +12,15 @@
 
 <body onclick="playMsc('music_login');">
 
+  <div id="loading_screen" class="loadingScreen hide">
+    <div class="loading-container">
+      <span id="loadNum">0%</span>
+      <div id="loadBar" class="loading-bar"></div>
+    </div>
+  </div>
+
+  <button onclick="Fullscreen('on')" class="fullScreenCtrl"></button>
+
   <div class="black_screen">
     <p>toque na tela para começar</p>
   </div>
@@ -72,7 +81,7 @@
     </div>
     <div class="default_body h_xl">
       <div class="carousel_chars">
-        <span class="arrow_l"></span>
+        <span onclick="changeChar('prev')" class="arrow_l"></span>
         <ul class="page_slots">
           <button id="slot_1" class="char_slot" onclick="selectChar(this)">
             <span class="empty"></span>
@@ -87,7 +96,7 @@
             <img id="imgChar_3" src="" alt="">
           </button>
         </ul>
-        <span class="arrow_r"></span>
+        <span onclick="changeChar('next')" class="arrow_r"></span>
       </div>
       <h3 class="total_pages_count">1 / 1</h3>
       <div class="total_slot_count">
@@ -117,9 +126,9 @@
     </div>
     <div class="default_footer">
       <div class="block_make_new">
-        
+
       </div>
-      <button class="btn btn_ok click-effect-login" onclick="cmd('fecharBlcLastLogin')"></button>
+      <button class="btn btn_ok click-effect-login" onclick="cmd('selectedPlayerChar')"></button>
       <button class="btn btn_cancel click-effect-login" onclick="cmd('fecharSelectPlayer')"></button>
     </div>
   </div>
@@ -147,19 +156,19 @@
     </div>
     <div class="default_body h_m">
       <div>
-        <label class="selectAlt">odin
+        <label class="selectAlt">premium
           <input type="radio" checked="checked" name="world" value="premium">
           <span class="checkmark">
             <span></span> Servidor Premium
           </span>
         </label>
-        <label class="selectAlt ">thor
+        <label class="selectAlt ">gratuito
           <input type="radio" name="world" value="gratuito">
           <span class="checkmark">
             <span></span> Servidor de Acesso Gratuito
           </span>
         </label>
-        <label class="selectAlt">thor
+        <label class="selectAlt">especial
           <input type="radio" name="world" value="especial">
           <span class="checkmark">
             <span></span> Servidor de Acesso Especial
