@@ -16,6 +16,9 @@ var imgChar_1 = document.getElementById("imgChar_1");
 var imgChar_2 = document.getElementById("imgChar_2");
 var imgChar_3 = document.getElementById("imgChar_3");
 
+var btnNewPlayerChar = document.getElementById("btnNewPlayerChar");
+var btnSelectedChar = document.getElementById("btnSelectedChar");
+
 var xhr = new XMLHttpRequest();
 var num_char = 0;
 var slot_num = 0;
@@ -148,6 +151,8 @@ function updateStatsValue(userDataSlot) {
     SelectedUserInt.innerHTML = userDataSlot.int;
     SelectedUserDes.innerHTML = userDataSlot.des;
     SelectedUserSor.innerHTML = userDataSlot.sor;
+    btnNewPlayerChar.classList.add('hide');
+    btnSelectedChar.classList.remove('hide');
   } else {
     SelectedUserName.innerHTML = '';
     SelectedUserClass.innerHTML = '';
@@ -162,6 +167,8 @@ function updateStatsValue(userDataSlot) {
     SelectedUserInt.innerHTML = '';
     SelectedUserDes.innerHTML = '';
     SelectedUserSor.innerHTML = '';
+    btnNewPlayerChar.classList.remove('hide');
+    btnSelectedChar.classList.add('hide');
   }
 }
 

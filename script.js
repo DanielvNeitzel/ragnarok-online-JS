@@ -241,6 +241,8 @@ function Fullscreen(stats) {
 }
 
 function loadingScreen() {
+    const numLoadImg = 'load_' + Math.floor(Math.random() * 8);
+    loading_screen.style.backgroundImage = "url('img/background/" + numLoadImg + ".jpg')";
     loading_screen.classList.remove('hide');
     var loadBar = document.getElementById("loadBar");
     var elem2 = document.getElementById("loadNum");
