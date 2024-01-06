@@ -83,9 +83,9 @@
       <div class="make_char_container">
         <div class="char_style_name">
           <div class="new_player_img">
-            <button onclick="changeChar('prev')" class="arrow_l change_char_l"></button>
-            <button onclick="changeChar('prev')" class="arrow_r  change_char_r"></button>
-            <img id="newImgChar" src="img/chars/aprendiz_1.png" alt="">
+            <button onclick="changeStyle('prev')" class="arrow_l change_char_l"></button>
+            <button onclick="changeStyle('next')" class="arrow_r  change_char_r"></button>
+            <img id="newStyleChar" src="img/chars/aprendiz_1.png" alt="">
           </div>
           <div class="new_player_name">
             <span>Name</span> <input type="text" name="" id="">
@@ -99,12 +99,19 @@
             <div class="out-4"></div>
             <div class="out-5"></div>
             <div class="out-6"></div>
+            <button onclick="addNewPoint('for')" class="btnStats btn-add-for">5</button>
+            <button onclick="addNewPoint('agi')" class="btnStats btn-add-agi">5</button>
+            <button onclick="addNewPoint('vit')" class="btnStats btn-add-vit">5</button>
+            <button onclick="addNewPoint('int')" class="btnStats btn-add-int">5</button>
+            <button onclick="addNewPoint('des')" class="btnStats btn-add-des">5</button>
+            <button onclick="addNewPoint('sor')" class="btnStats btn-add-sor">5</button>
             <div class="in-1 status-custom-border-1"></div>
             <div class="in-2 status-custom-border-2"></div>
             <div class="in-3 status-custom-border-3"></div>
             <div class="in-4 status-custom-border-4"></div>
             <div class="in-5 status-custom-border-5"></div>
             <div class="in-6 status-custom-border-6"></div>
+            
           </div>
         </div>
         <div class="char_info_stats">
@@ -276,6 +283,7 @@
   <script src="script.js"></script>
   <script src="script-drag.js"></script>
   <script src="login.js"></script>
+  <script src="create.js"></script>
 </body>
 
 </html>

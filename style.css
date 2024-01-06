@@ -459,6 +459,7 @@ body {
     width: 18px;
     height: 20px;
     margin: 0 20px 0 0;
+    z-index: 99;
 }
 
 .empty {
@@ -633,7 +634,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: top;
-    
+
 }
 
 .char_style_name {
@@ -641,13 +642,13 @@ body {
     margin-top: 100px;
 }
 
-.char_style_name > .new_player_img > img {
+.char_style_name>.new_player_img>img {
     position: relative;
     bottom: 25px;
     left: 15px;
 }
 
-.char_style_name > .new_player_img > img {
+.char_style_name>.new_player_img>img {
     position: relative;
     bottom: 25px;
     left: 15px;
@@ -667,7 +668,7 @@ body {
     position: relative;
     top: 110px;
     right: 35px;
-    border:0;
+    border: 0;
     background-color: transparent;
 }
 
@@ -675,7 +676,7 @@ body {
     position: relative;
     top: 110px;
     left: 65px;
-    border:0;
+    border: 0;
     background-color: transparent;
 }
 
@@ -684,16 +685,55 @@ body {
     bottom: 40px;
 }
 
-.new_player_name > span {
+.new_player_name>span {
     font-family: Arial, Helvetica, sans-serif;
-    color:#7b94cd;
+    color: #7b94cd;
     font-size: 15px;
     padding: 0 5px 0 0;
 }
 
-.new_player_name > input {
+.new_player_name>input {
     width: 125px;
-    border:1px solid #000;
+    border: 1px solid #000;
+}
+
+.btnStats {
+    position: relative;
+    border-radius: 50px;
+    border: 0;
+    width: 50px;
+    height: 50px;
+    padding: 0;
+}
+
+.btn-add-for {
+    left: 80px;
+    bottom: 45px;
+}
+
+.btn-add-agi {
+    left: 87px;
+    bottom: 45px;
+}
+
+.btn-add-vit {
+    left: 78px;
+    top: 0;
+}
+
+.btn-add-int {
+    left: 3px;
+    top: 45px;
+}
+
+.btn-add-des {
+    right: 86px;
+    top: 45px;
+}
+
+.btn-add-sor {
+    right: 160px;
+    top: 0;
 }
 
 .hexagon {
