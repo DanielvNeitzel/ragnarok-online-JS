@@ -74,7 +74,7 @@
     </div>
   </div>
 
-  <div id="win_make_player" class="block_default block_make_player hide">
+  <div id="win_make_player" class="block_default block_make_player">
     <div class="default_header">
       <span class="orb_blue"></span>
       <p>Criação de personagens</p>
@@ -82,7 +82,14 @@
     <div class="default_body h_xl">
       <div class="make_char_container">
         <div class="char_style_name">
-
+          <div class="new_player_img">
+            <button onclick="changeChar('prev')" class="arrow_l change_char_l"></button>
+            <button onclick="changeChar('prev')" class="arrow_r  change_char_r"></button>
+            <img id="newImgChar" src="img/chars/aprendiz_1.png" alt="">
+          </div>
+          <div class="new_player_name">
+            <span>Name</span> <input type="text" name="" id="">
+          </div>
         </div>
         <div class="char_graph_stats">
           <div class='hexagon'>
@@ -92,16 +99,25 @@
             <div class="out-4"></div>
             <div class="out-5"></div>
             <div class="out-6"></div>
-            <div class="in-1 status-custom-border"></div>
-            <div class="in-2 status-custom-border"></div>
-            <div class="in-3 status-custom-border"></div>
-            <div class="in-4 status-custom-border"></div>
-            <div class="in-5 status-custom-border"></div>
-            <div class="in-6 status-custom-border"></div>
+            <div class="in-1 status-custom-border-1"></div>
+            <div class="in-2 status-custom-border-2"></div>
+            <div class="in-3 status-custom-border-3"></div>
+            <div class="in-4 status-custom-border-4"></div>
+            <div class="in-5 status-custom-border-5"></div>
+            <div class="in-6 status-custom-border-6"></div>
           </div>
         </div>
         <div class="char_info_stats">
-
+          <div class="char_info">
+            <ul>
+              <li>FOR <span id="newUserFor">5</span></li>
+              <li>AGI <span id="newUserAgi">5</span></li>
+              <li>VIT <span id="newUserVit">5</span></li>
+              <li>INT <span id="newUserInt">5</span></li>
+              <li>DES <span id="newUserDes">5</span></li>
+              <li>SOR <span id="newUserSor">5</span></li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>

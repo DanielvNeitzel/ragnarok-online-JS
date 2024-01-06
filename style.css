@@ -629,6 +629,73 @@ body {
 /* ----- MAKE CHAR DEFAULT ------ */
 /* ------------------------------ */
 
+.make_char_container {
+    display: flex;
+    justify-content: center;
+    align-items: top;
+    
+}
+
+.char_style_name {
+    width: 250px;
+    margin-top: 100px;
+}
+
+.char_style_name > .new_player_img > img {
+    position: relative;
+    bottom: 25px;
+    left: 15px;
+}
+
+.char_style_name > .new_player_img > img {
+    position: relative;
+    bottom: 25px;
+    left: 15px;
+}
+
+.char_graph_stats {
+    width: 250px;
+    margin-top: 100px;
+}
+
+.char_info_stats {
+    width: 200px;
+    margin-top: 50px;
+}
+
+.change_char_l {
+    position: relative;
+    top: 110px;
+    right: 35px;
+    border:0;
+    background-color: transparent;
+}
+
+.change_char_r {
+    position: relative;
+    top: 110px;
+    left: 65px;
+    border:0;
+    background-color: transparent;
+}
+
+.new_player_name {
+    position: relative;
+    bottom: 40px;
+}
+
+.new_player_name > span {
+    font-family: Arial, Helvetica, sans-serif;
+    color:#7b94cd;
+    font-size: 15px;
+    padding: 0 5px 0 0;
+}
+
+.new_player_name > input {
+    width: 125px;
+    border:1px solid #000;
+}
+
 .hexagon {
     display: flex;
     width: 250px;
@@ -638,20 +705,30 @@ body {
     align-content: center;
     justify-content: center;
     align-items: center;
-    background: #888888;
 }
 
-:root {
-    --main-t-b-border: 46px solid #fff;
-    --main-l-r-border: 80px solid #fff;
-}
-
-.status-custom-border {
+.status-custom-border-1 {
     position: absolute;
-    border-top: var(--main-t-b-border);
-    border-bottom: var(--main-t-b-border);
-    border-left: var(--main-l-r-border);;
-    border-right: var(--main-l-r-border);;
+    border-top: 89px solid #fff;
+    border-bottom: 89px solid #fff;
+    border-left: 1px solid #fff;
+    border-right: 1px solid #fff;
+}
+
+.status-custom-border-2 {
+    position: absolute;
+    border-top: 89px solid #fff;
+    border-bottom: 89px solid #fff;
+    border-left: 1px solid #fff;
+    border-right: 1px solid #fff;
+}
+
+.status-custom-border-3 {
+    position: absolute;
+    border-top: 89px solid #fff;
+    border-bottom: 89px solid #fff;
+    border-left: 1px solid #fff;
+    border-right: 1px solid #fff;
 }
 
 .in-1 {
@@ -681,53 +758,53 @@ body {
 .out-1 {
     position: absolute;
     transform: rotate(0deg);
-    border-top: 50px solid #7B96CE;
-    border-bottom: 50px solid #7B96CE;
-    border-left: 90px solid #7B96CE;
-    border-right: 90px solid #7B96CE;
+    border-top: 45px solid #7B96CE;
+    border-bottom: 45px solid #7B96CE;
+    border-left: 80px solid #7B96CE;
+    border-right: 80px solid #7B96CE;
 }
 
 .out-2 {
     position: absolute;
     transform: rotate(60deg);
-    border-top: 50px solid #7B96CE;
-    border-bottom: 50px solid #7B96CE;
-    border-left: 90px solid #7B96CE;
-    border-right: 90px solid #7B96CE;
+    border-top: 45px solid #7B96CE;
+    border-bottom: 45px solid #7B96CE;
+    border-left: 80px solid #7B96CE;
+    border-right: 80px solid #7B96CE;
 }
 
 .out-3 {
     position: absolute;
     transform: rotate(120deg);
-    border-top: 50px solid #7B96CE;
-    border-bottom: 50px solid #7B96CE;
-    border-left: 90px solid #7B96CE;
-    border-right: 90px solid #7B96CE;
+    border-top: 45px solid #7B96CE;
+    border-bottom: 45px solid #7B96CE;
+    border-left: 80px solid #7B96CE;
+    border-right: 80px solid #7B96CE;
 }
 
 .out-4 {
     position: absolute;
     transform: rotate(180deg);
-    border-top: 50px solid #7B96CE;
-    border-bottom: 50px solid #7B96CE;
-    border-left: 90px solid #7B96CE;
-    border-right: 90px solid #7B96CE;
+    border-top: 45px solid #7B96CE;
+    border-bottom: 45px solid #7B96CE;
+    border-left: 80px solid #7B96CE;
+    border-right: 80px solid #7B96CE;
 }
 
 .out-5 {
     position: absolute;
     transform: rotate(240deg);
-    border-top: 50px solid #7B96CE;
-    border-bottom: 50px solid #7B96CE;
-    border-left: 90px solid #7B96CE;
-    border-right: 90px solid #7B96CE;
+    border-top: 45px solid #7B96CE;
+    border-bottom: 45px solid #7B96CE;
+    border-left: 80px solid #7B96CE;
+    border-right: 80px solid #7B96CE;
 }
 
 .out-6 {
     position: absolute;
     transform: rotate(300deg);
-    border-top: 50px solid #7B96CE;
-    border-bottom: 50px solid #7B96CE;
-    border-left: 90px solid #7B96CE;
-    border-right: 90px solid #7B96CE;
+    border-top: 45px solid #7B96CE;
+    border-bottom: 45px solid #7B96CE;
+    border-left: 80px solid #7B96CE;
+    border-right: 80px solid #7B96CE;
 }
