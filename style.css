@@ -448,6 +448,7 @@ body {
     width: 18px;
     height: 20px;
     margin: 0 0 0 20px;
+    z-index: 99;
 }
 
 .arrow_r {
@@ -704,6 +705,10 @@ body {
     width: 50px;
     height: 50px;
     padding: 0;
+    font-size: 18px;
+    font-family: system-ui;
+    background-color: #7B96CE;
+    color: #fff;
 }
 
 .btn-add-for {
