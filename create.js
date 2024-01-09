@@ -111,3 +111,7 @@ function addNewPoint(stats) {
   }
   updatePoints();
 }
+
+function createNewPlayer() {
+  
+}

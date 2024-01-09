@@ -46,6 +46,8 @@ function findUserObject(obj, username) {
       const userObject = obj[key].find(item => item.hasOwnProperty(username));
       if (userObject) {
         return userObject[username];
+      } else {
+        invalidLogin();
       }
     }
   }
@@ -57,7 +59,7 @@ function verifyLogin() {
   password = document.getElementById("input_user_pass").value;
   userData = findUserObject(data, username);
   if (userData) {
-    if (userData[0].password === password) {
+    if (userData[0].password === password && userData[0].password) {
       conSuccess();
     } else {
       invalidLogin();
@@ -144,6 +146,7 @@ function updateStatsValue(userDataSlot) {
     SelectedUserExp.innerHTML = userDataSlot.experience;
     SelectedUserHP.innerHTML = userDataSlot.hp;
     SelectedUserSP.innerHTML = userDataSlot.sp;
+    SelectedUserMap.innerHTML = userDataSlot.map;
 
     SelectedUserFor.innerHTML = userDataSlot.for;
     SelectedUserAgi.innerHTML = userDataSlot.agi;
@@ -160,6 +163,8 @@ function updateStatsValue(userDataSlot) {
     SelectedUserExp.innerHTML = '';
     SelectedUserHP.innerHTML = '';
     SelectedUserSP.innerHTML = '';
+    SelectedUserMap.innerHTML = '';
+
 
     SelectedUserFor.innerHTML = '';
     SelectedUserAgi.innerHTML = '';

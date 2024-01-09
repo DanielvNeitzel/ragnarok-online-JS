@@ -9,6 +9,7 @@ const win_last_login = document.getElementById('win_last_login');
 const block_message_login = document.getElementById('block_message_login');
 const win_confirm_exit = document.getElementById('win_confirm_exit');
 const win_select_player = document.getElementById('win_select_player');
+const win_make_player = document.getElementById('win_make_player');
 
 const block_login_form = document.getElementById('block_login_form');
 
@@ -129,6 +130,17 @@ function cmd(selected) {
             // loadPlayerInfo();
             break;
 
+        case 'newPlayerChar':
+            win_select_player.classList.add('hide');
+            win_make_player.style.zIndex = 1;
+            win_make_player.classList.remove('hide');
+            break;
+
+        case 'criarPlayerChar':
+            createNewPlayer();
+            break;
+
+
         default:
             break;
     }
@@ -151,7 +163,7 @@ function selectChar(selected) {
     loadCharSelected(selected.id);
 }
 
-function invalidLogin() {
+function invalidLogin(type) {
     win_msg_error.style.zIndex = 1;
     win_msg_error.classList.remove('hide');
     title_msg_error.innerHTML = 'Mensagem'

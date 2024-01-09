@@ -74,7 +74,7 @@
     </div>
   </div>
 
-  <div id="win_make_player" class="block_default block_make_player hide">
+  <div id="win_make_player" class="block_default block_make_player">
     <div class="default_header">
       <span class="orb_blue"></span>
       <p>Criação de personagens</p>
@@ -108,9 +108,6 @@
             <div class="in-1 status-custom-border-1"></div>
             <div class="in-2 status-custom-border-2"></div>
             <div class="in-3 status-custom-border-3"></div>
-            <div class="in-4 status-custom-border-4"></div>
-            <div class="in-5 status-custom-border-5"></div>
-            <div class="in-6 status-custom-border-6"></div>
             
           </div>
         </div>
@@ -173,6 +170,7 @@
           <li>EXP <span id="SelectedUserExp">‎</span></li>
           <li>HP <span id="SelectedUserHP">‎</span></li>
           <li>SP <span id="SelectedUserSP">‎</span></li>
+          <li>MAP <span id="SelectedUserMap">‎</span></li>
         </ul>
         <ul>
           <li>FOR <span id="SelectedUserFor">‎</span></li>
@@ -185,8 +183,7 @@
       </div>
     </div>
     <div class="default_footer">
-      <button id="btnNewPlayerChar" class="btn btn_make click-effect-login hide"
-        onclick="cmd('newPlayerChar')"></button>
+      <button id="btnNewPlayerChar" class="btn btn_make click-effect-login hide" onclick="cmd('newPlayerChar')"></button>
       <button id="btnSelectedChar" class="btn btn_ok click-effect-login" onclick="cmd('selectedPlayerChar')"></button>
       <button class="btn btn_cancel click-effect-login" onclick="cmd('fecharSelectPlayer')"></button>
     </div>
