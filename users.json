@@ -58,6 +58,7 @@
               "name": "Testando",
               "hair": "aprendiz_2",
               "class": "Aprendiz",
+              "map": "Tutorial",
               "level": 1,
               "experience": 0,
               "hp": 100,
