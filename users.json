@@ -8,38 +8,10 @@
           "auth_server": "gratuito",
           "slots": [
             {
-              "stats": "active",
-              "name": "admin",
-              "hair": "aprendiz_1",
-              "class": "Aprendiz",
-              "map": "Prontera",
-              "level": 99,
-              "experience": 999999999,
-              "hp": 99999,
-              "sp": 99999,
-              "for": 99,
-              "agi": 99,
-              "vit": 99,
-              "int": 99,
-              "des": 99,
-              "sor": 99
+              "stats": "empty"
             },
             {
-              "stats": "active",
-              "name": "ADM_Sirius",
-              "hair": "aprendiz_3",
-              "class": "Aprendiz",
-              "map": "Tutorial",
-              "level": 1,
-              "experience": 1,
-              "hp": 1,
-              "sp": 1,
-              "for": 1,
-              "agi": 1,
-              "vit": 1,
-              "int": 1,
-              "des": 1,
-              "sor": 1
+              "stats": "empty"
             },
             {
               "stats": "empty"
@@ -54,21 +26,7 @@
           "auth_server": "premium",
           "slots": [
             {
-              "stats": "active",
-              "name": "Testando",
-              "hair": "aprendiz_2",
-              "class": "Aprendiz",
-              "map": "Tutorial",
-              "level": 1,
-              "experience": 0,
-              "hp": 100,
-              "sp": 100,
-              "for": 1,
-              "agi": 1,
-              "vit": 1,
-              "int": 1,
-              "des": 1,
-              "sor": 1
+              "stats": "empty"
             },
             {
               "stats": "empty"

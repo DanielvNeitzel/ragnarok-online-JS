@@ -494,7 +494,7 @@ body {
     width: 150px;
     list-style: none;
     text-align: left;
-    margin: 0 0 0 0;
+    margin: 0 5px 0 0;
     padding: 0;
     font-weight: 800;
 }
@@ -528,7 +528,7 @@ body {
     flex-wrap: nowrap;
     align-content: center;
     align-items: center;
-    padding: 0 0 0 8px;
+    padding: 0 0 0 5px;
 }
 
 .total_slot_count {

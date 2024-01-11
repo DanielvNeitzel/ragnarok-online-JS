@@ -74,7 +74,7 @@
     </div>
   </div>
 
-  <div id="win_make_player" class="block_default block_make_player">
+  <div id="win_make_player" class="block_default block_make_player hide">
     <div class="default_header">
       <span class="orb_blue"></span>
       <p>Criação de personagens</p>
@@ -88,7 +88,7 @@
             <img id="newStyleChar" src="img/chars/aprendiz_1.png" alt="">
           </div>
           <div class="new_player_name">
-            <span>Name</span> <input type="text" name="newUserName" id="newUserName">
+            <span>Nome</span> <input type="text" name="newUserName" id="newUserName" onkeyup="resetStatus();">
           </div>
         </div>
         <div class="char_graph_stats">
@@ -127,7 +127,7 @@
     </div>
     <div class="default_footer">
       <button class="btn btn_ok click-effect-login" onclick="cmd('criarPlayerChar')"></button>
-      <button class="btn btn_cancel click-effect-login" onclick="cmd('fecharSelectPlayer')"></button>
+      <button class="btn btn_cancel click-effect-login" onclick="cmd('fecharcriarPlayer')"></button>
     </div>
   </div>
 

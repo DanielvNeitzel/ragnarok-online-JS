@@ -30,6 +30,8 @@ const block_news = document.querySelector('.block_news');
 var music_temp = '';
 var effect_temp = '';
 
+var temp_select_char;
+
 function clickInput(type) {
     switch (type) {
         case 'id':
@@ -140,6 +142,11 @@ function cmd(selected) {
             createNewPlayer();
             break;
 
+        case 'fecharcriarPlayer':
+            win_make_player.classList.add('hide');
+            win_select_player.style.zIndex = 1;
+            win_select_player.classList.remove('hide');
+            break;
 
         default:
             break;

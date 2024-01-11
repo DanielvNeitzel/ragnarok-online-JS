@@ -92,7 +92,6 @@ function loadCharSlots() {
   imgChar_3.src = '';
   for (let slot = 0; slot < userData[0].slots.length; slot++) {
     num_char = 0;
-    char_slot[0].classList.add('active');
     updateStatsValue(userData[0].slots[0])
     if (userData[0].slots[slot].stats === 'active') {
       const skin = userData[0].slots[slot].hair;
@@ -122,14 +121,17 @@ function loadCharSelected(id) {
   switch (id) {
     case 'slot_1':
       updateStatsValue(userData[0].slots[0]);
+      temp_select_char = 1;
       break;
 
     case 'slot_2':
       updateStatsValue(userData[0].slots[1]);
+      temp_select_char = 2;
       break;
 
     case 'slot_3':
       updateStatsValue(userData[0].slots[2]);
+      temp_select_char = 3;
       break;
 
     default:
@@ -139,7 +141,7 @@ function loadCharSelected(id) {
 }
 
 function updateStatsValue(userDataSlot) {
-  if (userDataSlot.stats === 'active') {
+  if (userDataSlot.stats !== 'empty') {
     SelectedUserName.innerHTML = userDataSlot.name;
     SelectedUserClass.innerHTML = userDataSlot.class;
     SelectedUserNv.innerHTML = userDataSlot.level;
