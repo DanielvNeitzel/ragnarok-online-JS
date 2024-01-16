@@ -25,244 +25,274 @@
     <p>toque na tela para começar</p>
   </div>
 
-  <div id="win_login" class="block_default block_login hide draggable">
-    <div class="default_header">
-      <span class="orb_blue"></span> LogOn
-    </div>
-    <div class="default_body h_m">
-      <div id="block_login_form" class="block_login_form">
-        <div class="row">
-          <div>
-            <h1 class="text-input">Usuário</h1>
+  <div class="containerLogin hide">
+
+    <div id="win_login" class="block_default block_login hide draggable">
+      <div class="default_header">
+        <span class="orb_blue"></span> LogOn
+      </div>
+      <div class="default_body h_m">
+        <div id="block_login_form" class="block_login_form">
+          <div class="row">
+            <div>
+              <h1 class="text-input">Usuário</h1>
+            </div>
+            <div>
+              <input onclick="clickInput('id')" type="text" name="input_user_id" id="input_user_id">
+            </div>
           </div>
-          <div>
-            <input onclick="clickInput('id')" type="text" name="input_user_id" id="input_user_id">
+          <div class="row">
+            <div>
+              <h1 class="text-input">Senha</h1>
+            </div>
+            <div>
+              <input onclick="clickInput('pass')" type="password" name="input_user_pass" id="input_user_pass">
+            </div>
           </div>
         </div>
-        <div class="row">
-          <div>
-            <h1 class="text-input">Senha</h1>
+        <div id="block_message_login" class="block_message hide">
+          <p>Por favor, Aguarde...</p>
+        </div>
+      </div>
+      <div class="default_footer">
+        <button id="loginGame" class="btn btn_connect click-effect-login" onclick="cmd('loginGame')"></button>
+        <button id="exitGame" class="btn btn_exit click-effect-login" onclick="cmd('exitGame')"></button>
+      </div>
+    </div>
+
+    <div id="win_last_login" class="block_default block_global_msg hide draggable">
+      <div class="default_header">
+        <span class="orb_blue"></span>
+        <p>Mensagem</p>
+      </div>
+      <div class="default_body h_s">
+        <div class="block_message">
+          <p>O servidor ainda reconhece seu último log-in.<br> Tente novamente em alguns minutos.</p>
+        </div>
+      </div>
+      <div class="default_footer">
+        <button class="btn btn_ok click-effect-login" onclick="cmd('fecharBlcLastLogin')"></button>
+        <button class="btn btn_cancel click-effect-login" onclick="cmd('fecharBlcLastLogin')"></button>
+      </div>
+    </div>
+
+    <div id="win_make_player" class="block_default block_make_player hide">
+      <div class="default_header">
+        <span class="orb_blue"></span>
+        <p>Criação de personagens</p>
+      </div>
+      <div class="default_body h_xl">
+        <div class="make_char_container">
+          <div class="char_style_name">
+            <div class="new_player_img">
+              <button onclick="changeStyle('prev')" class="arrow_l change_char_l"></button>
+              <button onclick="changeStyle('next')" class="arrow_r  change_char_r"></button>
+              <img id="newStyleChar" src="graphics/chars/aprendiz_1.png" alt="">
+            </div>
+            <div class="new_player_name">
+              <span>Nome</span> <input type="text" name="newUserName" id="newUserName" onkeyup="resetStatus();">
+            </div>
           </div>
-          <div>
-            <input onclick="clickInput('pass')" type="password" name="input_user_pass" id="input_user_pass">
+          <div class="char_graph_stats">
+            <div class='hexagon'>
+              <div class="out-1"></div>
+              <div class="out-2"></div>
+              <div class="out-3"></div>
+              <div class="out-4"></div>
+              <div class="out-5"></div>
+              <div class="out-6"></div>
+              <button onclick="addNewPoint('for')" class="btnStats btn-add-for"></button>
+              <button onclick="addNewPoint('agi')" class="btnStats btn-add-agi"></button>
+              <button onclick="addNewPoint('vit')" class="btnStats btn-add-vit"></button>
+              <button onclick="addNewPoint('int')" class="btnStats btn-add-int"></button>
+              <button onclick="addNewPoint('des')" class="btnStats btn-add-des"></button>
+              <button onclick="addNewPoint('sor')" class="btnStats btn-add-sor"></button>
+              <div class="in-1 status-custom-border-1"></div>
+              <div class="in-2 status-custom-border-2"></div>
+              <div class="in-3 status-custom-border-3"></div>
+
+            </div>
+          </div>
+          <div class="char_info_stats">
+            <div class="char_info">
+              <ul>
+                <li>FOR <span id="newUserFor"></span></li>
+                <li>AGI <span id="newUserAgi"></span></li>
+                <li>VIT <span id="newUserVit"></span></li>
+                <li>INT <span id="newUserInt"></span></li>
+                <li>DES <span id="newUserDes"></span></li>
+                <li>SOR <span id="newUserSor"></span></li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
-      <div id="block_message_login" class="block_message hide">
-        <p>Por favor, Aguarde...</p>
+      <div class="default_footer">
+        <button class="btn btn_ok click-effect-login" onclick="cmd('criarPlayerChar')"></button>
+        <button class="btn btn_cancel click-effect-login" onclick="cmd('fecharcriarPlayer')"></button>
       </div>
     </div>
-    <div class="default_footer">
-      <button id="loginGame" class="btn btn_connect click-effect-login" onclick="cmd('loginGame')"></button>
-      <button id="exitGame" class="btn btn_exit click-effect-login" onclick="cmd('exitGame')"></button>
-    </div>
-  </div>
 
-  <div id="win_last_login" class="block_default block_global_msg hide draggable">
-    <div class="default_header">
-      <span class="orb_blue"></span>
-      <p>Mensagem</p>
-    </div>
-    <div class="default_body h_s">
-      <div class="block_message">
-        <p>O servidor ainda reconhece seu último log-in.<br> Tente novamente em alguns minutos.</p>
+    <div id="win_select_player" class="block_default block_select_player hide">
+      <div class="default_header">
+        <span class="orb_blue"></span>
+        <p>Seleção de personagens</p>
       </div>
-    </div>
-    <div class="default_footer">
-      <button class="btn btn_ok click-effect-login" onclick="cmd('fecharBlcLastLogin')"></button>
-      <button class="btn btn_cancel click-effect-login" onclick="cmd('fecharBlcLastLogin')"></button>
-    </div>
-  </div>
-
-  <div id="win_make_player" class="block_default block_make_player hide">
-    <div class="default_header">
-      <span class="orb_blue"></span>
-      <p>Criação de personagens</p>
-    </div>
-    <div class="default_body h_xl">
-      <div class="make_char_container">
-        <div class="char_style_name">
-          <div class="new_player_img">
-            <button onclick="changeStyle('prev')" class="arrow_l change_char_l"></button>
-            <button onclick="changeStyle('next')" class="arrow_r  change_char_r"></button>
-            <img id="newStyleChar" src="graphics/chars/aprendiz_1.png" alt="">
-          </div>
-          <div class="new_player_name">
-            <span>Nome</span> <input type="text" name="newUserName" id="newUserName" onkeyup="resetStatus();">
-          </div>
+      <div class="default_body h_xl">
+        <div class="carousel_chars">
+          <span onclick="changeChar('prev')" class="arrow_l"></span>
+          <ul class="page_slots">
+            <button id="slot_1" class="char_slot" onclick="selectChar(this)">
+              <span class="empty"></span>
+              <img id="imgChar_1" src="" alt="">
+            </button>
+            <button id="slot_2" class="char_slot" onclick="selectChar(this)">
+              <span class="empty"></span>
+              <img id="imgChar_2" src="" alt="">
+            </button>
+            <button id="slot_3" class="char_slot" onclick="selectChar(this)">
+              <span class="empty"></span>
+              <img id="imgChar_3" src="" alt="">
+            </button>
+          </ul>
+          <span onclick="changeChar('next')" class="arrow_r"></span>
         </div>
-        <div class="char_graph_stats">
-          <div class='hexagon'>
-            <div class="out-1"></div>
-            <div class="out-2"></div>
-            <div class="out-3"></div>
-            <div class="out-4"></div>
-            <div class="out-5"></div>
-            <div class="out-6"></div>
-            <button onclick="addNewPoint('for')" class="btnStats btn-add-for"></button>
-            <button onclick="addNewPoint('agi')" class="btnStats btn-add-agi"></button>
-            <button onclick="addNewPoint('vit')" class="btnStats btn-add-vit"></button>
-            <button onclick="addNewPoint('int')" class="btnStats btn-add-int"></button>
-            <button onclick="addNewPoint('des')" class="btnStats btn-add-des"></button>
-            <button onclick="addNewPoint('sor')" class="btnStats btn-add-sor"></button>
-            <div class="in-1 status-custom-border-1"></div>
-            <div class="in-2 status-custom-border-2"></div>
-            <div class="in-3 status-custom-border-3"></div>
-            
-          </div>
-        </div>
-        <div class="char_info_stats">
-          <div class="char_info">
-            <ul>
-              <li>FOR <span id="newUserFor"></span></li>
-              <li>AGI <span id="newUserAgi"></span></li>
-              <li>VIT <span id="newUserVit"></span></li>
-              <li>INT <span id="newUserInt"></span></li>
-              <li>DES <span id="newUserDes"></span></li>
-              <li>SOR <span id="newUserSor"></span></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="default_footer">
-      <button class="btn btn_ok click-effect-login" onclick="cmd('criarPlayerChar')"></button>
-      <button class="btn btn_cancel click-effect-login" onclick="cmd('fecharcriarPlayer')"></button>
-    </div>
-  </div>
-
-  <div id="win_select_player" class="block_default block_select_player hide">
-    <div class="default_header">
-      <span class="orb_blue"></span>
-      <p>Seleção de personagens</p>
-    </div>
-    <div class="default_body h_xl">
-      <div class="carousel_chars">
-        <span onclick="changeChar('prev')" class="arrow_l"></span>
-        <ul class="page_slots">
-          <button id="slot_1" class="char_slot" onclick="selectChar(this)">
-            <span class="empty"></span>
-            <img id="imgChar_1" src="" alt="">
-          </button>
-          <button id="slot_2" class="char_slot" onclick="selectChar(this)">
-            <span class="empty"></span>
-            <img id="imgChar_2" src="" alt="">
-          </button>
-          <button id="slot_3" class="char_slot" onclick="selectChar(this)">
-            <span class="empty"></span>
-            <img id="imgChar_3" src="" alt="">
-          </button>
-        </ul>
-        <span onclick="changeChar('next')" class="arrow_r"></span>
-      </div>
-      <h3 class="total_pages_count">1 / 1</h3>
-      <div class="total_slot_count">
-        <span class="block_charactor">
-          <span> 0 / 0 </span>
-          <span> (Charactor/Total Slot)</span>
-        </span>
-      </div>
-      <div class="char_info">
-        <ul>
-          <li>Nome <span id="SelectedUserName">‎</span></li>
-          <li>Classe <span id="SelectedUserClass">‎</span></li>
-          <li>Nv. <span id="SelectedUserNv">‎</span></li>
-          <li>EXP <span id="SelectedUserExp">‎</span></li>
-          <li>HP <span id="SelectedUserHP">‎</span></li>
-          <li>SP <span id="SelectedUserSP">‎</span></li>
-          <li>MAP <span id="SelectedUserMap">‎</span></li>
-        </ul>
-        <ul>
-          <li>FOR <span id="SelectedUserFor">‎</span></li>
-          <li>AGI <span id="SelectedUserAgi">‎</span></li>
-          <li>VIT <span id="SelectedUserVit">‎</span></li>
-          <li>INT <span id="SelectedUserInt">‎</span></li>
-          <li>DES <span id="SelectedUserDes">‎</span></li>
-          <li>SOR <span id="SelectedUserSor">‎</span></li>
-        </ul>
-      </div>
-    </div>
-    <div class="default_footer">
-      <button id="btnNewPlayerChar" class="btn btn_make click-effect-login hide" onclick="cmd('newPlayerChar')"></button>
-      <button id="btnSelectedChar" class="btn btn_ok click-effect-login" onclick="cmd('selectedPlayerChar')"></button>
-      <button class="btn btn_cancel click-effect-login" onclick="cmd('fecharSelectPlayer')"></button>
-    </div>
-  </div>
-
-  <div id="win_msg_error" class="block_default block_global_msg hide draggable">
-    <div class="default_header">
-      <span class="orb_blue"></span>
-      <p id="title_msg_error"></p>
-    </div>
-    <div class="default_body h_s">
-      <div class="block_message">
-        <p id="text_msg_error"></p>
-      </div>
-    </div>
-    <div class="default_footer">
-      <button class="btn btn_ok click-effect-login" onclick="cmd('fecharBlcMsgError')"></button>
-      <button class="btn btn_cancel click-effect-login" onclick="cmd('fecharBlcMsgError')"></button>
-    </div>
-  </div>
-
-  <div id="win_select_world" class="block_default block_select_world hide draggable">
-    <div class="default_header">
-      <span class="orb_blue"></span> Select world
-      <p id="title_msg_error"></p>
-    </div>
-    <div class="default_body h_m">
-      <div>
-        <label class="selectAlt">premium
-          <input type="radio" checked="checked" name="world" value="premium">
-          <span class="checkmark">
-            <span></span> Servidor Premium
+        <h3 class="total_pages_count">1 / 1</h3>
+        <div class="total_slot_count">
+          <span class="block_charactor">
+            <span> 0 / 0 </span>
+            <span> (Charactor/Total Slot)</span>
           </span>
-        </label>
-        <label class="selectAlt ">gratuito
-          <input type="radio" name="world" value="gratuito">
-          <span class="checkmark">
-            <span></span> Servidor de Acesso Gratuito
-          </span>
-        </label>
-        <label class="selectAlt">especial
-          <input type="radio" name="world" value="especial">
-          <span class="checkmark">
-            <span></span> Servidor de Acesso Especial
-          </span>
-        </label>
+        </div>
+        <div class="char_info">
+          <ul>
+            <li>Nome <span id="SelectedUserName">‎</span></li>
+            <li>Classe <span id="SelectedUserClass">‎</span></li>
+            <li>Nv. <span id="SelectedUserNv">‎</span></li>
+            <li>EXP <span id="SelectedUserExp">‎</span></li>
+            <li>HP <span id="SelectedUserHP">‎</span></li>
+            <li>SP <span id="SelectedUserSP">‎</span></li>
+            <li>MAP <span id="SelectedUserMap">‎</span></li>
+          </ul>
+          <ul>
+            <li>FOR <span id="SelectedUserFor">‎</span></li>
+            <li>AGI <span id="SelectedUserAgi">‎</span></li>
+            <li>VIT <span id="SelectedUserVit">‎</span></li>
+            <li>INT <span id="SelectedUserInt">‎</span></li>
+            <li>DES <span id="SelectedUserDes">‎</span></li>
+            <li>SOR <span id="SelectedUserSor">‎</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="default_footer">
+        <button id="btnNewPlayerChar" class="btn btn_make click-effect-login hide"
+          onclick="cmd('newPlayerChar')"></button>
+        <button id="btnSelectedChar" class="btn btn_ok click-effect-login" onclick="cmd('selectedPlayerChar')"></button>
+        <button class="btn btn_cancel click-effect-login" onclick="cmd('fecharSelectPlayer')"></button>
       </div>
     </div>
-    <div class="default_footer">
-      <button class="btn btn_ok click-effect-login" onclick="cmd('selectedUserWorld')"></button>
-      <button class="btn btn_cancel click-effect-login" onclick="cmd('fecharWinSelectWorld')"></button>
-    </div>
-  </div>
 
-  <div id="win_confirm_exit" class="block_default block_global_msg hide draggable">
-    <div class="default_header">
-      <span class="orb_blue"></span>
-      <p>Mensagem</p>
-    </div>
-    <div class="default_body">
-      <div class="block_message">
-        <p>Deseja fechar o jogo ?</p>
+    <div id="win_msg_error" class="block_default block_global_msg hide draggable">
+      <div class="default_header">
+        <span class="orb_blue"></span>
+        <p id="title_msg_error"></p>
+      </div>
+      <div class="default_body h_s">
+        <div class="block_message">
+          <p id="text_msg_error"></p>
+        </div>
+      </div>
+      <div class="default_footer">
+        <button class="btn btn_ok click-effect-login" onclick="cmd('fecharBlcMsgError')"></button>
+        <button class="btn btn_cancel click-effect-login" onclick="cmd('fecharBlcMsgError')"></button>
       </div>
     </div>
-    <div class="default_footer">
-      <button class="btn btn_ok click-effect-login" onclick="cmd('resetPage')"></button>
-      <button class="btn btn_cancel click-effect-login" onclick="cmd('closeConfirmExit')"></button>
+
+    <div id="win_select_world" class="block_default block_select_world hide draggable">
+      <div class="default_header">
+        <span class="orb_blue"></span> Select world
+        <p id="title_msg_error"></p>
+      </div>
+      <div class="default_body h_m">
+        <div>
+          <label class="selectAlt">premium
+            <input type="radio" checked="checked" name="world" value="premium">
+            <span class="checkmark">
+              <span></span> Servidor Premium
+            </span>
+          </label>
+          <label class="selectAlt ">gratuito
+            <input type="radio" name="world" value="gratuito">
+            <span class="checkmark">
+              <span></span> Servidor de Acesso Gratuito
+            </span>
+          </label>
+          <label class="selectAlt">especial
+            <input type="radio" name="world" value="especial">
+            <span class="checkmark">
+              <span></span> Servidor de Acesso Especial
+            </span>
+          </label>
+        </div>
+      </div>
+      <div class="default_footer">
+        <button class="btn btn_ok click-effect-login" onclick="cmd('selectedUserWorld')"></button>
+        <button class="btn btn_cancel click-effect-login" onclick="cmd('fecharWinSelectWorld')"></button>
+      </div>
     </div>
+
+    <div id="win_confirm_exit" class="block_default block_global_msg hide draggable">
+      <div class="default_header">
+        <span class="orb_blue"></span>
+        <p>Mensagem</p>
+      </div>
+      <div class="default_body">
+        <div class="block_message">
+          <p>Deseja fechar o jogo ?</p>
+        </div>
+      </div>
+      <div class="default_footer">
+        <button class="btn btn_ok click-effect-login" onclick="cmd('resetPage')"></button>
+        <button class="btn btn_cancel click-effect-login" onclick="cmd('closeConfirmExit')"></button>
+      </div>
+    </div>
+
+    <div class="block_default block_news hide">
+      <div class="default_header">
+        <span class="orb_blue"></span>
+        <p>Noticias / Eventos</p>
+      </div>
+      <div class="default_body h_s">
+        <div class="h-100 flex-v-center">
+          <h1>Servidor de Ragnarok JS</h1>
+          <h3>Desenvolvido por Daniel Neitzel</h3>
+        </div>
+      </div>
+    </div>
+
   </div>
 
-  <div class="block_default block_news hide">
-    <div class="default_header">
-      <span class="orb_blue"></span>
-      <p>Noticias / Eventos</p>
-    </div>
-    <div class="default_body h_s">
-      <div class="h-100 flex-v-center">
-        <h1>Servidor de Ragnarok JS</h1>
-        <h3>Desenvolvido por Daniel Neitzel</h3>
+  <div class="containerMap">
+    <div id="win_make_player" class="block_default block_map_user_info">
+      <div class="default_header">
+        <span class="orb_blue"></span>
+        <p>Informações básicas</p>
+      </div>
+      <div class="default_body user_custom_h">
+        <div class="userDataMap">
+          <label class="hud-username">Username</label>
+          <label class="hud-class">Aprendiz</label>
+          <label class="hud-hp">HP</label>
+          <label class="hud-sp">SP</label>
+          <div class="userLevelsMap">
+            <label>Base <span class="bar-level-base">0</span> <span class="bar-exp-base">a</span></label>
+            <label>Classe <span class="bar-level-class">0</span> <span class="bar-exp-class">a</span></label>
+          </div>
+        </div>
+      </div>
+      <div class="default_footer">
+        <span class="currentWeight"> Peso: 999 / 999 </span>
+        <span class="currentZeny"> Zeny: 1.000.000,00 </span>
       </div>
     </div>
   </div>
