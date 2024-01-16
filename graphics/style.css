@@ -164,6 +164,20 @@ body {
     border-radius: 5px;
 }
 
+.block_map_user_info {
+    width: 100%;
+    max-width: 340px;
+    height: auto;
+    position: absolute;
+    top: 92px;
+    left: 172px;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background: #ffffff;
+    box-shadow: 0 0 5px black;
+    border-radius: 5px;
+}
+
 .block_news {
     width: 100%;
     max-width: 400px;
@@ -195,6 +209,10 @@ body {
     flex-wrap: nowrap;
     align-content: center;
     justify-content: center;
+}
+
+.user_custom_h {
+    height: 120px !important;
 }
 
 .h_xs {
@@ -876,4 +894,61 @@ body {
     border-bottom: 45px solid #7B96CE;
     border-left: 80px solid #7B96CE;
     border-right: 80px solid #7B96CE;
+}
+
+
+/* ------------------------------ */
+/* -------- HUD MAP CHAR -------- */
+/* ------------------------------ */
+
+
+.userDataMap {
+    width: auto;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 5px 0 0 5px;
+}
+
+.userLevelsMap {
+    display: flex;
+    width: 305px;
+    background-color: #E6E7F0;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: flex-start;
+    font-size: 11px;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 10px auto 0;
+}
+
+.currentWeight {
+    margin: 0;
+}
+
+.currentZeny {
+    margin: 0 10px 0 10px;
+}
+
+.hud-username {
+    margin: 0 0 0 10px;
+}
+
+.hud-class {
+    margin: 0 0 0 10px;
+}
+
+.hud-hp {
+    margin: 0 0 0 15px;
+}
+
+.hud-sp {
+    margin: 0 0 0 15px;
 }
