@@ -273,37 +273,78 @@
   </div>
 
   <div class="containerMap">
-    <div id="win_make_player" class="block_default block_map_user_info">
-      <div class="default_header">
-        <span class="orb_blue"></span>
-        <p>Informações básicas</p>
+    <div class="currentMapImg">
+      <div class="containerChat">
+        <div>
+          <button class="btn_chat active">Geral</button>
+          <button class="btn_chat">Grupo</button>
+          <button class="btn_chat">Clã</button>
+          <button class="btn_chat">Danos</button>
+          <button class="btn_chat">EXP</button>
+        </div>
+        <label class="live-chat">
+          <span class="msg_server_alert">
+            ====================================================================<br>
+            Bem-vindo ao Servidor Ragnarok JS - Desenvolvido por Daniel Neitzel<br>
+            Taxa de EXP: 150% ( Base 100% + Premium 0% + FreeServer 50% )<br>
+            Taxa de Drop: 100% ( Base 100% + Premium 0% + FreeServer 0% )<br>
+            Penalidade de Morte: 100% ( Base 100% + Premium 0% + FreeServer 0% )<br>
+            ====================================================================<br>
+          </span>
+          <span class="msg_server">
+            Você recebeu uma nova missão.<br>
+          </span>
+          <span class="msg_system">
+            TutorialAprendiz : effect<br>
+          </span>
+          <span class="msg_error">
+            Este item não lhe é de direito.<br>
+          </span>
+          <span class="msg_pick_item">
+            Adaga do Aprendiz foi equipado.<br>
+          </span>
+          
+        </label>
+        <input disabled class="input-chat" type="text" id="">
       </div>
-      <div class="default_body user_custom_h">
-        <div class="userDataMap">
-          <label class="hud-username">Username</label>
-          <label class="hud-class">Aprendiz</label>
-          <label class="hud-hp">HP <span class="bar-hp-base">0 / 0</span><span>100%</span></label>
-          <label class="hud-sp">SP <span class="bar-sp-base">0 / 0</span><span>100%</span></label>
-          <div class="userLevelsMap">
-            <label>Base. <span class="bar-level-base">0</span> <span class="bar-exp-base"></span></label>
-            <label>Classe. <span class="bar-level-class">0</span> <span class="bar-exp-class"></span></label>
+      <button class="btn_levelUp_base hide"></button>
+      <button class="btn_levelUp_class hide"></button>
+      <div id="win_make_player" class="block_default block_map_user_info">
+        <div class="default_header">
+          <span class="orb_blue"></span>
+          <p>Informações básicas</p>
+        </div>
+        <div class="default_body user_custom_h">
+          <div class="userDataMap">
+            <label class="hud-username">Username</label>
+            <label class="hud-class">Aprendiz</label>
+            <label class="hud-hp">HP <span class="bar-hp-base"><span class="bar-hp-base-current">0 /
+                  0</span></span><span>0%</span></label>
+            <label class="hud-sp">SP <span class="bar-sp-base"><span class="bar-sp-base-current">0 /
+                  0</span></span><span>0%</span></label>
+            <div class="userLevelsMap">
+              <label>Base. <span class="bar-level-base">0</span> <span class="bar-exp-base"><span
+                    class="bar-exp-base-current"></span></span></label>
+              <label>Classe. <span class="bar-level-class">0</span> <span class="bar-exp-class"><span
+                    class="bar-exp-class-current"></span></span></label>
+            </div>
           </div>
         </div>
+        <div class="default_footer">
+          <span class="currentWeight"> Peso: 0 / 0 </span>
+          <span class="currentZeny"> Zeny: 0 </span>
+        </div>
       </div>
-      <div class="default_footer">
-        <span class="currentWeight"> Peso: 999 / 999 </span>
-        <span class="currentZeny"> Zeny: 1.000.000,00 </span>
+      <div class="win_menu_player">
+        <button class="btn_menu_player">info</button>
+        <button class="btn_menu_player">habilidades</button>
+        <button class="btn_menu_player">itens</button>
+        <button class="btn_menu_player">mapa</button>
+        <button class="btn_menu_player">grupo</button>
+        <button class="btn_menu_player">clã</button>
+        <button class="btn_menu_player">quest</button>
+        <button class="btn_menu_player">opções</button>
       </div>
-    </div>
-    <div class="win_menu_player">
-      <button class="btn_menu_player">info</button>
-      <button class="btn_menu_player">habilidades</button>
-      <button class="btn_menu_player">itens</button>
-      <button class="btn_menu_player">mapa</button>
-      <button class="btn_menu_player">grupo</button>
-      <button class="btn_menu_player">clã</button>
-      <button class="btn_menu_player">quest</button>
-      <button class="btn_menu_player">opções</button>
     </div>
   </div>
 
