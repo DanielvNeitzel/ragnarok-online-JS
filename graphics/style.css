@@ -1100,27 +1100,27 @@ body {
     border-top: 1px solid #464646;
 }
 
-.live-chat > .msg_server {
+.live-chat>.msg_server {
     color: #ffff00;
 }
 
-.live-chat > .msg_server_alert {
+.live-chat>.msg_server_alert {
     color: #ffb300;
 }
 
-.live-chat > .msg_system {
+.live-chat>.msg_system {
     color: #12da00;
 }
 
-.live-chat > .msg_player {
+.live-chat>.msg_player {
     color: #fff;
 }
 
-.live-chat > .msg_pick_item {
+.live-chat>.msg_pick_item {
     color: #00d6d3;
 }
 
-.live-chat > .msg_error {
+.live-chat>.msg_error {
     color: #f70000;
 }
 
@@ -1165,3 +1165,50 @@ body {
     border-radius: 0px;
     border: 3px none #8c8c8c;
 }
+
+/* =================================== */
+
+.win_dialog_npc {
+    display: flex;
+    position: absolute;
+    padding: 5px;
+    border: none;
+    border-radius: 3px;
+    width: 300px;
+    height: 250px;
+    transform: translate(-50%, -50%);
+    top: 55%;
+    left: 75%;
+    background-color: #f1f1f1;
+    z-index: 99;
+}
+
+#npc_dialog {
+    width: 100%;
+    padding: 20px 10px;
+    border: 1px solid #7ba9f1;
+    border-radius: 5px;
+    font-family: arial;
+    font-size: 13px;
+}
+
+.win_options_npc {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    position: absolute;
+    padding: 15px 0 0px 0;
+    top: 60%;
+    left: 35%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background: #ffffff;
+    box-shadow: 0 0 5px black;
+    border-radius: 5px;
+}
+
+.win_options_npc > .default_footer.no_border {
+    border:0!important;
+}
+
+/* =================================== */

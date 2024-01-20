@@ -274,6 +274,43 @@
 
   <div class="containerMap">
     <div class="currentMapImg">
+      <div class="win_dialog_npc">
+        <span id="npc_dialog">
+          [NPC Name]<br><br>
+          Agora que nos conhecemos, <br>
+          há algo em que eu possa ajudá-lo?<br>
+          Estou aqui para suas perguntas~
+        </span>
+      </div>
+      <div class="win_options_npc block_default draggable">
+          <div class="default_body h_s">
+            <div>
+              <label class="selectAlt">premium
+                <input type="radio" checked="checked" name="world" value="premium">
+                <span class="checkmark">
+                  <span></span> Servidor Premium
+                </span>
+              </label>
+              <label class="selectAlt ">gratuito
+                <input type="radio" name="world" value="gratuito">
+                <span class="checkmark">
+                  <span></span> Servidor de Acesso Gratuito
+                </span>
+              </label>
+              <label class="selectAlt">especial
+                <input type="radio" name="world" value="especial">
+                <span class="checkmark">
+                  <span></span> Servidor de Acesso Especial
+                </span>
+              </label>
+            </div>
+          </div>
+          <div class="default_footer no_border">
+            <button class="btn btn_ok click-effect-login" onclick="cmd('selectedUserWorld')"></button>
+            <button class="btn btn_cancel click-effect-login" onclick="cmd('fecharWinSelectWorld')"></button>
+          </div>
+        </div>
+      </div>
       <div class="containerChat">
         <div>
           <button class="btn_chat active">Geral</button>
@@ -303,13 +340,13 @@
           <span class="msg_pick_item">
             Adaga do Aprendiz foi equipado.<br>
           </span>
-          
+
         </label>
         <input disabled class="input-chat" type="text" id="">
       </div>
       <button class="btn_levelUp_base hide"></button>
       <button class="btn_levelUp_class hide"></button>
-      <div id="win_make_player" class="block_default block_map_user_info">
+      <div class="block_default block_map_user_info">
         <div class="default_header">
           <span class="orb_blue"></span>
           <p>Informações básicas</p>
