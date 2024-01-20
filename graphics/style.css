@@ -1177,9 +1177,10 @@ body {
     width: 300px;
     height: 250px;
     transform: translate(-50%, -50%);
-    top: 55%;
-    left: 75%;
+    top: 50%;
+    left: 65%;
     background-color: #f1f1f1;
+    box-shadow: 0 0 5px black;
     z-index: 99;
 }
 
@@ -1198,8 +1199,8 @@ body {
     height: auto;
     position: absolute;
     padding: 15px 0 0px 0;
-    top: 60%;
-    left: 35%;
+    top: 58%;
+    left: 42%;
     transform: translate(-50%, -50%);
     text-align: center;
     background: #ffffff;
