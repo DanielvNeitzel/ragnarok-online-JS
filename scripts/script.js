@@ -189,13 +189,13 @@ function genericMsgError() {
 }
 
 function playMsc(status) {
-    // if (music_temp !== 'music_login') {
-    //     const soundGame = document.getElementById('musicGame');
-    //     soundGame.volume = 0.1;
-    //     soundGame.src = 'audio/login_sound.mp3';
-    //     soundGame.play();
-    //     music_temp = status;
-    // }
+    if (music_temp !== 'music_login') {
+        const soundGame = document.getElementById('musicGame');
+        soundGame.volume = 0.1;
+        soundGame.src = 'audio/login_sound.mp3';
+        soundGame.play();
+        music_temp = status;
+    }
     showLoginScreen();
 }
 
