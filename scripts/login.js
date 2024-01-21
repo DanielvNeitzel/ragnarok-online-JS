@@ -28,6 +28,8 @@ var username;
 var password;
 var res;
 
+var currentUserSelected;
+
 userRequest();
 
 function userRequest() {
@@ -65,6 +67,15 @@ function verifyLogin() {
       invalidLogin();
     }
   }
+}
+
+function selectChar(selected) {
+  for (let slot = 0; slot < char_slot.length; slot++) {
+      char_slot[slot].classList.remove('active');
+  }
+  selected.classList.add('active');
+  console.log(selected.id);
+  loadCharSelected(selected.id);
 }
 
 function verifyWorld() {
@@ -126,6 +137,7 @@ function loadCharSelected(id) {
 
     case 'slot_2':
       updateStatsValue(userData[0].slots[1]);
+      
       temp_select_char = 2;
       break;
 
@@ -137,7 +149,6 @@ function loadCharSelected(id) {
     default:
       break;
   }
-
 }
 
 function updateStatsValue(userDataSlot) {
@@ -158,6 +169,7 @@ function updateStatsValue(userDataSlot) {
     SelectedUserSor.innerHTML = userDataSlot.sor;
     btnNewPlayerChar.classList.add('hide');
     btnSelectedChar.classList.remove('hide');
+    storageData(userDataSlot);
   } else {
     SelectedUserName.innerHTML = '';
     SelectedUserClass.innerHTML = '';
@@ -176,6 +188,14 @@ function updateStatsValue(userDataSlot) {
     SelectedUserSor.innerHTML = '';
     btnNewPlayerChar.classList.remove('hide');
     btnSelectedChar.classList.add('hide');
+  }
+}
+
+function storageData(data) {
+  if(data){
+    currentUserSelected = data;
+  }else{
+    currentUserSelected = null;
   }
 }
 
@@ -228,4 +248,8 @@ function changeChar(opt) {
         break;
     }
   }
+}
+
+function loadPlayerInfo() {
+  console.log(currentUserSelected);
 }

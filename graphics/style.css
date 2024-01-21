@@ -369,7 +369,7 @@ body {
     height: 22px;
     border-bottom: 0;
     width: 100%;
-    background-color: #eee;
+    background-color: #fff;
     flex-direction: row;
     align-items: center;
     font-weight: 400;
@@ -1030,6 +1030,7 @@ body {
     justify-items: center;
     justify-content: center;
     border: 0px;
+    box-shadow: 0 0 5px black;
 }
 
 .win_menu_player>.btn_menu_player:hover {
@@ -1168,6 +1169,14 @@ body {
 
 /* =================================== */
 
+.npcConfig{
+    width: auto;
+    height: auto;
+    position: relative;
+    transform: translate(-50%, -50%);
+    cursor: url('cursors/help_select.gif'), auto;
+}
+
 .win_dialog_npc {
     display: flex;
     position: absolute;
@@ -1175,22 +1184,23 @@ body {
     border: none;
     border-radius: 3px;
     width: 300px;
-    height: 250px;
+    height: 200px;
     transform: translate(-50%, -50%);
-    top: 50%;
-    left: 65%;
+    top: calc(50% + 25px);
+    left: calc(50% + 130px);
     background-color: #f1f1f1;
     box-shadow: 0 0 5px black;
     z-index: 99;
 }
 
-#npc_dialog {
+.npc_dialog {
     width: 100%;
     padding: 20px 10px;
     border: 1px solid #7ba9f1;
     border-radius: 5px;
     font-family: arial;
     font-size: 13px;
+    text-align: justify;
 }
 
 .win_options_npc {
@@ -1199,8 +1209,8 @@ body {
     height: auto;
     position: absolute;
     padding: 15px 0 0px 0;
-    top: 58%;
-    left: 42%;
+    top: calc(50% + 55px);
+    left: calc(50% - 190px);
     transform: translate(-50%, -50%);
     text-align: center;
     background: #ffffff;

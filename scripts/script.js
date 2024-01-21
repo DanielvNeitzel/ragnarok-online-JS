@@ -128,8 +128,8 @@ function cmd(selected) {
             break;
 
         case 'selectedPlayerChar':
-            loadingScreen();
-            // loadPlayerInfo();
+            // loadingScreen();
+            loadPlayerInfo();
             break;
 
         case 'newPlayerChar':
@@ -161,15 +161,6 @@ function conSuccess() {
     win_select_world.classList.add('fadeInAnim');
 }
 
-function selectChar(selected) {
-    for (let slot = 0; slot < char_slot.length; slot++) {
-        char_slot[slot].classList.remove('active');
-    }
-    selected.classList.add('active');
-    console.log(selected.id);
-    loadCharSelected(selected.id);
-}
-
 function invalidLogin(type) {
     win_msg_error.style.zIndex = 1;
     win_msg_error.classList.remove('hide');
@@ -198,13 +189,13 @@ function genericMsgError() {
 }
 
 function playMsc(status) {
-    if (music_temp !== 'music_login') {
-        const soundGame = document.getElementById('musicGame');
-        soundGame.volume = 0.1;
-        soundGame.src = 'audio/login_sound.mp3';
-        soundGame.play();
-        music_temp = status;
-    }
+    // if (music_temp !== 'music_login') {
+    //     const soundGame = document.getElementById('musicGame');
+    //     soundGame.volume = 0.1;
+    //     soundGame.src = 'audio/login_sound.mp3';
+    //     soundGame.play();
+    //     music_temp = status;
+    // }
     showLoginScreen();
 }
 

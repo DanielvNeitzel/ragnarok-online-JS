@@ -133,7 +133,7 @@ function createNewPlayer() {
       "level": 1,
       "experience": 0,
       "hp": 100,
-      "sp": 100,
+      "sp": 75,
       "for": default_stats.for,
       "agi": default_stats.agi,
       "vit": default_stats.vit,
