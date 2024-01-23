@@ -2,3 +2,16 @@
   top: calc(50% - 80px);
   left: calc(50% - 0px);
 }
+
+.sprakki::after {
+  position: absolute;
+  display: flex;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  content: "Sprakki";
+  color: #638dfb;
+  -webkit-text-stroke-width: 0.7px;
+  -webkit-text-stroke-color: #000;
+  top: calc(50% - 30px);
+  left: calc(50% - 25px);
+}

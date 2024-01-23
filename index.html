@@ -26,7 +26,7 @@
     <p>toque na tela para começar</p>
   </div>
 
-  <div class="containerLogin">
+  <div class="containerLogin hide">
 
     <div id="win_login" class="block_default block_login hide draggable">
       <div class="default_header">
@@ -273,95 +273,96 @@
 
   </div>
 
-  <div id="containerMap" class="containerMap hide">
-    <div class="currentMapImg">
-      <img class="npcConfig sprakki" src="graphics/npcs/tutorial_guide_2.png" alt="" onclick="speak('Sprakki')">
+  <div id="containerMap" class="containerMap">
+    <div class="currentMap">
     </div>
-    <div class="containerChat">
-      <div>
-        <button class="btn_chat active">Geral</button>
-        <button class="btn_chat">Grupo</button>
-        <button class="btn_chat">Clã</button>
-        <button class="btn_chat">Danos</button>
-        <button class="btn_chat">EXP</button>
+    <div class="hud-player-map">
+      <div class="containerChat">
+        <div>
+          <button class="btn_chat active">Geral</button>
+          <button class="btn_chat">Grupo</button>
+          <button class="btn_chat">Clã</button>
+          <button class="btn_chat">Danos</button>
+          <button class="btn_chat">EXP</button>
+        </div>
+        <label class="live-chat">
+          <span class="msg_server_alert">
+            ====================================================================<br>
+            Bem-vindo ao Servidor Ragnarok JS - Desenvolvido por Daniel Neitzel<br>
+            Taxa de EXP: 150% ( Base 100% + Premium 0% + FreeServer 50% )<br>
+            Taxa de Drop: 100% ( Base 100% + Premium 0% + FreeServer 0% )<br>
+            Penalidade de Morte: 100% ( Base 100% + Premium 0% + FreeServer 0% )<br>
+            ====================================================================<br>
+          </span>
+          <span class="msg_server">
+            Você recebeu uma nova missão.<br>
+          </span>
+          <span class="msg_system">
+            TutorialAprendiz : effect<br>
+          </span>
+          <span class="msg_error">
+            Este item não lhe é de direito.<br>
+          </span>
+          <span class="msg_pick_item">
+            Adaga do Aprendiz foi equipado.<br>
+          </span>
+        </label>
+        <input disabled class="input-chat" type="text" id="">
       </div>
-      <label class="live-chat">
-        <span class="msg_server_alert">
-          ====================================================================<br>
-          Bem-vindo ao Servidor Ragnarok JS - Desenvolvido por Daniel Neitzel<br>
-          Taxa de EXP: 150% ( Base 100% + Premium 0% + FreeServer 50% )<br>
-          Taxa de Drop: 100% ( Base 100% + Premium 0% + FreeServer 0% )<br>
-          Penalidade de Morte: 100% ( Base 100% + Premium 0% + FreeServer 0% )<br>
-          ====================================================================<br>
-        </span>
-        <span class="msg_server">
-          Você recebeu uma nova missão.<br>
-        </span>
-        <span class="msg_system">
-          TutorialAprendiz : effect<br>
-        </span>
-        <span class="msg_error">
-          Este item não lhe é de direito.<br>
-        </span>
-        <span class="msg_pick_item">
-          Adaga do Aprendiz foi equipado.<br>
-        </span>
-      </label>
-      <input disabled class="input-chat" type="text" id="">
-    </div>
-    <button class="btn_levelUp_base hide"></button>
-    <button class="btn_levelUp_class hide"></button>
-    <div class="block_default block_map_user_info">
-      <div class="default_header">
-        <span class="orb_blue"></span>
-        <p>Informações básicas</p>
-      </div>
-      <div class="default_body user_custom_h">
-        <div class="userDataMap">
-          <label class="hud-username">Username</label>
-          <label class="hud-class">Aprendiz</label>
-          <label class="hud-hp">HP <span class="bar-hp-base"><span class="bar-hp-base-current">0 /
-                0</span></span><span>0%</span></label>
-          <label class="hud-sp">SP <span class="bar-sp-base"><span class="bar-sp-base-current">0 /
-                0</span></span><span>0%</span></label>
-          <div class="userLevelsMap">
-            <label>Base. <span class="bar-level-base">0</span> <span class="bar-exp-base"><span
-                  class="bar-exp-base-current"></span></span></label>
-            <label>Classe. <span class="bar-level-class">0</span> <span class="bar-exp-class"><span
-                  class="bar-exp-class-current"></span></span></label>
+      <button class="btn_levelUp_base hide"></button>
+      <button class="btn_levelUp_class hide"></button>
+      <div class="block_default block_map_user_info">
+        <div class="default_header">
+          <span class="orb_blue"></span>
+          <p>Informações básicas</p>
+        </div>
+        <div class="default_body user_custom_h">
+          <div class="userDataMap">
+            <label class="hud-username">Username</label>
+            <label class="hud-class">Aprendiz</label>
+            <label class="hud-hp">HP <span class="bar-hp-base"><span class="bar-hp-base-current">0 /
+                  0</span></span><span>0%</span></label>
+            <label class="hud-sp">SP <span class="bar-sp-base"><span class="bar-sp-base-current">0 /
+                  0</span></span><span>0%</span></label>
+            <div class="userLevelsMap">
+              <label>Base. <span class="bar-level-base">0</span> <span class="bar-exp-base"><span
+                    class="bar-exp-base-current"></span></span></label>
+              <label>Classe. <span class="bar-level-class">0</span> <span class="bar-exp-class"><span
+                    class="bar-exp-class-current"></span></span></label>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="default_footer">
-        <span class="currentWeight"> Peso: 0 / 0 </span>
-        <span class="currentZeny"> Zeny: 0 </span>
-      </div>
-    </div>
-    <div class="win_menu_player">
-      <button class="btn_menu_player">info</button>
-      <button class="btn_menu_player">habilidades</button>
-      <button class="btn_menu_player">itens</button>
-      <button class="btn_menu_player">mapa</button>
-      <button class="btn_menu_player">grupo</button>
-      <button class="btn_menu_player">clã</button>
-      <button class="btn_menu_player">quest</button>
-      <button class="btn_menu_player">opções</button>
-    </div>
-    <div id="win_dialog_opt_npc" class="hide">
-      <div class="win_dialog_npc draggable">
-        <span class="npc_dialog">
-          <span id="npc_name"></span>
-          <br>
-          <span id="npc_text"></span>
-        </span>
-      </div>
-      <div class="win_options_npc block_default draggable">
-        <div class="default_body h_s">
-          <div id="lbls_opt_npc"></div>
+        <div class="default_footer">
+          <span class="currentWeight"> Peso: 0 / 0 </span>
+          <span class="currentZeny"> Zeny: 0 </span>
         </div>
-        <div class="default_footer no_border">
-          <button class="btn btn_ok" onclick="optDialogNPC('Sprakki')"></button>
-          <button class="btn btn_cancel" onclick="closeDialogOpt()"></button>
+      </div>
+      <div class="win_menu_player">
+        <button class="btn_menu_player">info</button>
+        <button class="btn_menu_player">habilidades</button>
+        <button class="btn_menu_player">itens</button>
+        <button class="btn_menu_player">mapa</button>
+        <button class="btn_menu_player">grupo</button>
+        <button class="btn_menu_player">clã</button>
+        <button class="btn_menu_player">quest</button>
+        <button class="btn_menu_player">opções</button>
+      </div>
+      <div id="win_dialog_opt_npc" class="hide">
+        <div class="win_dialog_npc draggable">
+          <span class="npc_dialog">
+            <span id="npc_name"></span>
+            <br>
+            <span id="npc_text"></span>
+          </span>
+        </div>
+        <div class="win_options_npc block_default draggable">
+          <div class="default_body h_s">
+            <div id="lbls_opt_npc"></div>
+          </div>
+          <div class="default_footer no_border">
+            <button class="btn btn_ok" onclick="optDialogNPC('Sprakki')"></button>
+            <button class="btn btn_cancel" onclick="closeDialogOpt()"></button>
+          </div>
         </div>
       </div>
     </div>
@@ -383,6 +384,7 @@
   <script src="scripts/login.js"></script>
   <script src="scripts/create.js"></script>
   <script src="scripts/npc_dialog.js"></script>
+  <script src="scripts/map.js"></script>
 </body>
 
 </html>

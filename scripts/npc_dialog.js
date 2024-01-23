@@ -6,6 +6,7 @@ const win_dialog_npc = document.querySelector('.win_dialog_npc');
 
 const jsonUrl = "config/npc_dialogs.json";
 
+var resp;
 var selectedNPCInfo;
 
 fetchJSON('');
@@ -39,58 +40,30 @@ async function fetchJSON(npcSelected) {
 }
 
 function speak(npc) {
-  fetchJSON(npc);
-  setTimeout(() => {
-    WinNpcOpen = win_dialog_opt_npc.classList.contains("hide");
-    if (WinNpcOpen) {
-      win_dialog_opt_npc.classList.remove('hide');
-      npc_name.innerHTML = selectedNPCInfo.name;
-      npc_text.innerHTML = selectedNPCInfo.dialog1;
-      selectedNPCInfo.options.forEach((option, index) => {
-        lbls_opt_npc.innerHTML += `
+  if (!resp) {
+    fetchJSON(npc);
+    setTimeout(() => {
+      WinNpcOpen = win_dialog_opt_npc.classList.contains("hide");
+      if (WinNpcOpen) {
+        win_dialog_opt_npc.classList.remove('hide');
+        npc_name.innerHTML = selectedNPCInfo.name;
+        npc_text.innerHTML = selectedNPCInfo.dialog1;
+        selectedNPCInfo.options.forEach((option, index) => {
+          lbls_opt_npc.innerHTML += `
       <label class='selectAlt'>${option.value}
         <input type='radio' id='NPC_dialog' name='NPC_dialog' value='${option.value}'>
         <span class='checkmark'>
           <span></span>${option.value}
         </span>
-      </label>
-      `
-        if (index === 0) {
-          const first = document.getElementById("NPC_dialog");
-          first.setAttribute("checked", "checked");
-        }
-      });
-    }
-  }, 500);
-}
-
-function closeDialogOpt() {
-  win_dialog_opt_npc.classList.add('hide');
-  cleanDialogNPC();
-}
-
-function cleanDialogNPC() {
-  npc_name.innerHTML = '';
-  npc_text.innerHTML = '';
-  lbls_opt_npc.innerHTML = '';
-  win_dialog_npc.style.top = 'calc(50% + 25px)';
-  win_dialog_npc.style.left = 'calc(50% + 130px)';
-  win_dialog_opt_npc.style.top = 'calc(50% + 55px)';
-  win_dialog_opt_npc.style.left = 'calc(50% - 190px)';
-}
-
-function optDialogNPC() {
-  const items = document.getElementsByName('NPC_dialog');
-  for (var i = 0; i < items.length; i++) {
-    if (items[i].checked) {
-      resp = items[i].value
-      break;
-    }
-  }
-
-  console.log(resp);
-
-  if (resp) {
+      </label>`
+      if (index === 0) {
+        const first = document.getElementById("NPC_dialog");
+        first.setAttribute("checked", "checked");
+      }
+        });
+      }
+    }, 500);
+  } else {
     lbls_opt_npc.innerHTML = '';
     switch (resp) {
       case 'Sim, me conte mais sobre o server.':
@@ -102,8 +75,7 @@ function optDialogNPC() {
             <span class='checkmark'>
               <span></span>${option.value}
             </span>
-          </label>
-          `
+          </label>`
           if (index === 0) {
             const first = document.getElementById("NPC_dialog");
             first.setAttribute("checked", "checked");
@@ -117,5 +89,37 @@ function optDialogNPC() {
         closeDialogOpt();
         break;
     }
+    if (index === 0) {
+      const first = document.getElementById("NPC_dialog");
+      first.setAttribute("checked", "checked");
+    }
   }
+}
+
+function closeDialogOpt() {
+  win_dialog_opt_npc.classList.add('hide');
+  cleanDialogNPC();
+}
+
+function cleanDialogNPC() {
+  resp = null;
+  npc_name.innerHTML = '';
+  npc_text.innerHTML = '';
+  lbls_opt_npc.innerHTML = '';
+  win_dialog_npc.style.top = 'calc(50% + 25px)';
+  win_dialog_npc.style.left = 'calc(50% + 130px)';
+  win_dialog_opt_npc.style.top = 'calc(50% + 55px)';
+  win_dialog_opt_npc.style.left = 'calc(50% - 190px)';
+}
+
+function optDialogNPC() {
+  const items = document.getElementsByName('NPC_dialog');
+  for (var i = 0; i < items.length; i++) {
+    if (items[i].checked) {
+      resp = items[i].value;
+      speak();
+    }
+  }
+
+  // console.log(resp);
 }

@@ -61,6 +61,7 @@ function showLoginScreen() {
                 block_news.classList.add('fadeInAnim');
                 input_user_id.focus();
                 black_screen.style.display = "none";
+                generateMapAndNpcs('Tutorial_0_1');
             });
         }, 1000
     );

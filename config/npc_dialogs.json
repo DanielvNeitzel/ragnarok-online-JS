@@ -2,7 +2,7 @@
   "Sprakki": {
     "name": "[Sprakki]",
     "dialog1": "Olá! Bem vindo ao mundo de Ragnarok JS.<br> Meu nome é Sprakki e eu estou aqui encarregada de dar a você o guia basico sobre o jogo.",
-    "dialog2": "Servidor Criado em HTML5, CSS3 e Javascript Vanilla. Todo o layout foi desenvolvido na mão sem qualquer utilização de Plugins e APIs.<br><br> Ele foi desenvolvido por Daniel Neitzel Vieira.<br> ",
+    "dialog2": "Servidor Criado em HTML5, CSS3 e Javascript Vanilla. Todo o layout foi desenvolvido na mão sem qualquer utilização de Plugins e APIs.<br><br> Desenvolvido por Daniel Neitzel Vieira.<br> ",
     "options": [
       {
         "value": "Sim, me conte mais sobre o server."
