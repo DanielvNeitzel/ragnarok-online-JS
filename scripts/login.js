@@ -38,7 +38,7 @@ function userRequest() {
       data = JSON.parse(xhr.responseText);
     }
   }
-  xhr.open("GET", "../users/users.json", true);
+  xhr.open("GET", "./users/users.json", true);
   xhr.send();
 }
 
