@@ -27,6 +27,8 @@ const block_charactor = document.querySelector('.block_charactor span');
 const block_login = document.querySelector('.block_login');
 const block_news = document.querySelector('.block_news');
 
+var statusLoading = false;
+
 var music_temp = '';
 var effect_temp = '';
 
@@ -54,14 +56,14 @@ function showLoginScreen() {
             black_screen.style.transition = "opacity " + .6 + "s";
             black_screen.style.opacity = 0;
             black_screen.addEventListener("transitionend", function () {
-                console.log("loading complete");
+                console.log("Carregamento dos dados completado");
                 block_login.classList.remove('hide');
                 block_news.classList.remove('hide');
                 block_login.classList.add('fadeInAnim');
                 block_news.classList.add('fadeInAnim');
                 input_user_id.focus();
                 black_screen.style.display = "none";
-                generateMapAndNpcs('Tutorial_0_1');
+                // generateMapAndNpcs('Tutorial_0_1');
             });
         }, 1000
     );
@@ -129,8 +131,18 @@ function cmd(selected) {
             break;
 
         case 'selectedPlayerChar':
-            // loadingScreen();
-            loadPlayerInfo();
+            loadingScreen();
+            var id = setInterval(loadVerify, 1000);
+            function loadVerify() {
+                if (statusLoading) {
+                    statusLoading = false;
+                    clearInterval(id);
+                    loadPlayerInfo();
+                    generateMapAndNpcs(currentUserSelected.map);
+                }else{
+                    console.warn('loading em andamento');
+                }
+            }
             break;
 
         case 'newPlayerChar':
@@ -263,7 +275,7 @@ function loadingScreen() {
         if (width >= 100) {
             clearInterval(id);
             loading_screen.classList.add('hide');
-            return false;
+            statusLoading = true;
         } else {
             width++;
             loadBar.style.width = width + '%';

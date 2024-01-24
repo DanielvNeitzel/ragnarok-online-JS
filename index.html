@@ -26,7 +26,7 @@
     <p>toque na tela para começar</p>
   </div>
 
-  <div class="containerLogin hide">
+  <div class="containerLogin">
 
     <div id="win_login" class="block_default block_login hide draggable">
       <div class="default_header">
@@ -273,7 +273,7 @@
 
   </div>
 
-  <div id="containerMap" class="containerMap">
+  <div id="containerMap" class="containerMap hide">
     <div class="currentMap">
     </div>
     <div class="hud-player-map">
@@ -285,7 +285,7 @@
           <button class="btn_chat">Danos</button>
           <button class="btn_chat">EXP</button>
         </div>
-        <label class="live-chat">
+        <label id="live-chat" class="live-chat">
           <span class="msg_server_alert">
             ====================================================================<br>
             Bem-vindo ao Servidor Ragnarok JS - Desenvolvido por Daniel Neitzel<br>
@@ -294,7 +294,7 @@
             Penalidade de Morte: 100% ( Base 100% + Premium 0% + FreeServer 0% )<br>
             ====================================================================<br>
           </span>
-          <span class="msg_server">
+          <!-- <span class="msg_server">
             Você recebeu uma nova missão.<br>
           </span>
           <span class="msg_system">
@@ -306,8 +306,11 @@
           <span class="msg_pick_item">
             Adaga do Aprendiz foi equipado.<br>
           </span>
+          <span class="msg_player">
+            testando mensagem player<br>
+          </span> -->
         </label>
-        <input disabled class="input-chat" type="text" id="">
+        <input disabled class="input-chat" type="text" id="inputChat" onclick="activeChatInput(this)">
       </div>
       <button class="btn_levelUp_base hide"></button>
       <button class="btn_levelUp_class hide"></button>
@@ -318,23 +321,23 @@
         </div>
         <div class="default_body user_custom_h">
           <div class="userDataMap">
-            <label class="hud-username">Username</label>
-            <label class="hud-class">Aprendiz</label>
-            <label class="hud-hp">HP <span class="bar-hp-base"><span class="bar-hp-base-current">0 /
-                  0</span></span><span>0%</span></label>
-            <label class="hud-sp">SP <span class="bar-sp-base"><span class="bar-sp-base-current">0 /
-                  0</span></span><span>0%</span></label>
+            <label id="currentUsername" class="hud-username">Username</label>
+            <label id="CurrentClass" class="hud-class">Classe</label>
+            <label class="hud-hp">HP <span class="bar-hp-base"><span id="currentHP" class="bar-hp-base-current">0 /
+                  0</span></span><span id="currentPorcentHP">0%</span></label>
+            <label class="hud-sp">SP <span class="bar-sp-base"><span id="currentSP" class="bar-sp-base-current">0 /
+                  0</span></span><span id="currentPorcentSP">0%</span></label>
             <div class="userLevelsMap">
-              <label>Base. <span class="bar-level-base">0</span> <span class="bar-exp-base"><span
+              <label>Base. <span id="currentBaseLevel" class="bar-level-base">0</span> <span id="currentBaseExp" class="bar-exp-base"><span
                     class="bar-exp-base-current"></span></span></label>
-              <label>Classe. <span class="bar-level-class">0</span> <span class="bar-exp-class"><span
+              <label>Classe. <span id="currentClassLevel" class="bar-level-class">0</span> <span id="currentClassExp" class="bar-exp-class"><span
                     class="bar-exp-class-current"></span></span></label>
             </div>
           </div>
         </div>
         <div class="default_footer">
-          <span class="currentWeight"> Peso: 0 / 0 </span>
-          <span class="currentZeny"> Zeny: 0 </span>
+          <span id="currentWeight" class="currentWeight"> Peso: 0 / 0 </span>
+          <span id="currentZeny" class="currentZeny"> Zeny: 0 </span>
         </div>
       </div>
       <div class="win_menu_player">
@@ -385,6 +388,8 @@
   <script src="scripts/create.js"></script>
   <script src="scripts/npc_dialog.js"></script>
   <script src="scripts/map.js"></script>
+  <script src="scripts/player.js"></script>
+  <script src="scripts/chat_engine.js"></script>
 </body>
 
 </html>

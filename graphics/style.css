@@ -989,19 +989,21 @@ body {
 .bar-exp-base {
     width: 170px;
     height: 5px;
-    padding: 0 5px 0 5px;
+    padding: 0;
     margin: 2px 2px 2px 20px;
     background-color: #7B96CE;
     display: inline-flex;
+    transition: all 1s;
 }
 
 .bar-exp-class {
     width: 170px;
     height: 5px;
-    padding: 0 5px 0 5px;
-    margin: 2px 2px 2px 13px;
+    padding: 0;
+    margin: 2px 2px 2px 20px;
     background-color: #7B96CE;
     display: inline-flex;
+    transition: all 1s;
 }
 
 .win_menu_player {
@@ -1059,7 +1061,8 @@ body {
 }
 
 .currentMap {
-    background-image: url(maps/tutorial_0_1_bg.png);
+    background-image: url();
+    background-color: #000;
     background-position: center center;
     background-size: cover;
     width: 100%;
@@ -1123,6 +1126,10 @@ body {
 
 .live-chat>.msg_error {
     color: #f70000;
+}
+
+.live-chat>.msg_player {
+    color: #fff;
 }
 
 /* =================================== */

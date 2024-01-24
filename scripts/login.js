@@ -250,6 +250,3 @@ function changeChar(opt) {
   }
 }
 
-function loadPlayerInfo() {
-  console.log(currentUserSelected);
-}
