@@ -61,7 +61,7 @@ function changeStyle(opt) {
     }
   }
   console.log(styleNumDefault);
-  newStyleChar.src = '../graphics/chars/aprendiz_' + styleNumDefault + '.png';
+  newStyleChar.src = './graphics/chars/aprendiz_' + styleNumDefault + '.png';
 }
 
 function addNewPoint(stats) {

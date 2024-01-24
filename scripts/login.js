@@ -38,7 +38,7 @@ function userRequest() {
       data = JSON.parse(xhr.responseText);
     }
   }
-  xhr.open("GET", "../users/users.json", true);
+  xhr.open("GET", "./users/users.json", true);
   xhr.send();
 }
 
@@ -110,15 +110,15 @@ function loadCharSlots() {
       block_charactor.innerHTML = num_char + ' / 3';
       switch (slot) {
         case 0:
-          imgChar_1.src = '../graphics/chars/' + skin + '.png'
+          imgChar_1.src = './graphics/chars/' + skin + '.png'
           break;
 
         case 1:
-          imgChar_2.src = '../graphics/chars/' + skin + '.png'
+          imgChar_2.src = './graphics/chars/' + skin + '.png'
           break;
 
         case 2:
-          imgChar_3.src = '../graphics/chars/' + skin + '.png'
+          imgChar_3.src = './graphics/chars/' + skin + '.png'
           break;
 
         default:
