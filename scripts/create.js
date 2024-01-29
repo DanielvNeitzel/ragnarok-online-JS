@@ -123,7 +123,8 @@ function resetStatus() {
 }
 
 function createNewPlayer() {
-  if (NewNameChar.value !== '') {
+  var status = validatePlayer();
+  if (status) {
     const newUser = {
       "stats": "active",
       "name": NewNameChar.value,
@@ -145,20 +146,26 @@ function createNewPlayer() {
     }
 
     console.log(newUser);
-
     console.log(userData[0].slots);
     userData[0].slots.push(newUser);
     userData[0].slots = userData[0].slots.filter(slot => slot.stats == "active");
     verifyEmptySlot();
     loadCharSlots();
     cmd('fecharcriarPlayer');
-  } else {
-    win_msg_error.style.zIndex = 2;
-    win_msg_error.classList.remove('hide');
-    title_msg_error.innerHTML = 'Mensagem';
-    text_msg_error.innerHTML = 'Digite um nome válido para o personagem.';
-    NewNameChar.style.border = '1px solid red';
-    NewNameChar.focus();
+  }
+}
+
+function validatePlayer() {
+  if (NewNameChar.value !== '' || NewNameChar.value !== null || NewNameChar.value !== undefined) {
+    if (NewNameChar.value.length >= 6 && NewNameChar.value.length <= 13) {
+      return true;
+    }else{
+      showErrorMessage('numberCharName');
+      return false;
+    }
+  }else{
+    showErrorMessage('validCharName');
+    return false;
   }
 }
 
@@ -184,5 +191,5 @@ function verifyEmptySlot() {
     default:
       break;
   }
-  
+
 }
