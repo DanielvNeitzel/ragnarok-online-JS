@@ -56,10 +56,10 @@ function speak(npc) {
           <span></span>${option.value}
         </span>
       </label>`
-      if (index === 0) {
-        const first = document.getElementById("NPC_dialog");
-        first.setAttribute("checked", "checked");
-      }
+          if (index === 0) {
+            const first = document.getElementById("NPC_dialog");
+            first.setAttribute("checked", "checked");
+          }
         });
       }
     }, 500);
@@ -88,7 +88,7 @@ function speak(npc) {
       default:
         closeDialogOpt();
         break;
-    }    
+    }
   }
 }
 
