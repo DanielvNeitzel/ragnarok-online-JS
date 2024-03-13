@@ -55,6 +55,42 @@
   left: calc(50% - -85px);
 }
 
+.instructor_0_3 {
+  top: calc(50% - 60px);
+  left: calc(50% - -90px);
+}
+
+.instructor_0_3::after {
+  position: absolute;
+  display: flex;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  content: "Instrutor";
+  color: #638dfb;
+  -webkit-text-stroke-width: 0.7px;
+  -webkit-text-stroke-color: #000;
+  top: calc(50% - 0px);
+  left: calc(50% - -60px);
+}
+
+.instructor_0_4 {
+  top: calc(50% - 60px);
+  left: calc(50% - -20px);
+}
+
+.instructor_0_4::after {
+  position: absolute;
+  display: flex;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  content: "Instrutor inicial";
+  color: #638dfb;
+  -webkit-text-stroke-width: 0.7px;
+  -webkit-text-stroke-color: #000;
+  top: calc(50% - 8px);
+  left: calc(50% - 30px);
+}
+
 
 /*------------------> TELEPORTS COORDS */
 
@@ -74,4 +110,22 @@
   -webkit-text-stroke-color: #000;
   top: calc(50% - 6px);
   left: calc(50% - -288px);
+}
+
+.tele02 {
+  top: calc(50% - 60px);
+  left: calc(50% - -75px);
+}
+
+.tele02::after {
+  position: absolute;
+  display: flex;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  content: "Portal";
+  color: #638dfb;
+  -webkit-text-stroke-width: 0.7px;
+  -webkit-text-stroke-color: #000;
+  top: calc(50% - -30px);
+  left: calc(50% - -195px);
 }

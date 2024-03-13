@@ -1,5 +1,6 @@
 
 var docElem = document.documentElement;
+var statusFullscreen = 'off';
 
 const input_user_id = document.getElementById('input_user_id');
 const input_user_pass = document.getElementById('input_user_pass');
@@ -10,6 +11,7 @@ const block_message_login = document.getElementById('block_message_login');
 const win_confirm_exit = document.getElementById('win_confirm_exit');
 const win_select_player = document.getElementById('win_select_player');
 const win_make_player = document.getElementById('win_make_player');
+const win_skills_player = document.getElementById('win_skills_player');
 
 const block_login_form = document.getElementById('block_login_form');
 
@@ -26,6 +28,7 @@ const clickLBtnLogin = document.querySelectorAll('.click-effect-login');
 const block_charactor = document.querySelector('.block_charactor span');
 const block_login = document.querySelector('.block_login');
 const block_news = document.querySelector('.block_news');
+
 
 var statusLoading = false;
 
@@ -139,7 +142,7 @@ function cmd(selected) {
                     clearInterval(id);
                     loadPlayerInfo();
                     generateMapAndNpcs(currentUserSelected.map);
-                }else{
+                } else {
                     console.warn('loading em andamento');
                 }
             }
@@ -159,6 +162,15 @@ function cmd(selected) {
             win_make_player.classList.add('hide');
             win_select_player.style.zIndex = 1;
             win_select_player.classList.remove('hide');
+            break;
+
+        case 'abrirWinSkillsPlayer':
+            win_skills_player.style.zIndex = 1;
+            win_skills_player.classList.remove('hide');
+            break;
+
+        case 'fecharWinSkillsPlayer':
+            win_skills_player.classList.add('hide');
             break;
 
         default:
@@ -244,7 +256,7 @@ input_user_pass.onkeydown = function (e) {
 
 
 function Fullscreen(stats) {
-    if (stats === 'on') {
+    if (statusFullscreen === 'off') {
         if (docElem.requestFullscreen) {
             docElem.requestFullscreen();
         } else if (docElem.webkitRequestFullscreen) { /* Safari */
@@ -252,6 +264,7 @@ function Fullscreen(stats) {
         } else if (docElem.msRequestFullscreen) { /* IE11 */
             docElem.msRequestFullscreen();
         }
+        statusFullscreen = 'on';
     } else {
         if (document.exitFullscreen) {
             document.exitFullscreen();
@@ -260,6 +273,7 @@ function Fullscreen(stats) {
         } else if (document.msExitFullscreen) { /* IE11 */
             document.msExitFullscreen();
         }
+        statusFullscreen = 'off';
     }
 }
 

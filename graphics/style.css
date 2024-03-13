@@ -45,7 +45,7 @@ body {
 .black_screen {
     width: 100vw;
     height: 100vh;
-    background: #000000;
+    background: rgb(0 0 0 / 75%);
     z-index: 99;
     color: #fff;
     display: flex;
@@ -148,6 +148,31 @@ body {
     background: #ffffff;
     box-shadow: 0 0 5px black;
     border-radius: 5px;
+}
+
+.block_skills_player {
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background: #ffffff;
+    box-shadow: 0 0 5px black;
+    border-radius: 5px;
+}
+
+.habilityPoints {
+    display: flex;
+    padding: 0 0 0 25px;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: center;
+    width: 80%;
+    flex-direction: row;
 }
 
 .block_make_player {
@@ -1006,7 +1031,33 @@ body {
     transition: all 1s;
 }
 
+.win_skills_player {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    position: absolute;
+    top: 95px;
+    left: 155px;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background: #ffffff;
+    box-shadow: 0 0 5px black;
+    border-radius: 5px;
+}
+
 .win_menu_player {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    position: absolute;
+    top: 210px;
+    left: 155px;
+    transform: translate(-50%, -50%);
+    background: transparent;
+    border-radius: 5px;
+}
+
+.win_mini_map {
     width: 100%;
     max-width: 300px;
     height: auto;
@@ -1236,8 +1287,9 @@ body {
     width: 100%;
     height: 100%;
     background: #000000;
-    display: absolute;
-    z-index: 999;
+    display: block;
+    position: relative;
+    z-index: 9999;
 }
 
 .to_hide {

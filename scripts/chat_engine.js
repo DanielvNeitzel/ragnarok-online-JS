@@ -35,10 +35,16 @@ document.addEventListener('keypress', function (event) {
 
 function salvarMensagem() {
   var dados = {
-    nome: currentUserSelected.name,
+    nome: 'usuario_mock',
     mensagem: inputChat.value,
     data: formatarDataHora()
   };
+  // var dados = {
+  //   nome: currentUserSelected.name,
+  //   mensagem: inputChat.value,
+  //   data: formatarDataHora()
+  // };
+
   fetch('http://www.danielneitzel.com.br/api/ragnarokJS/mensagens.php', {
     method: 'POST',
     headers: {

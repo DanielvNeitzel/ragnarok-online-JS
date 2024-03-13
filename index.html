@@ -20,7 +20,7 @@
     </div>
   </div>
 
-  <button onclick="Fullscreen('on')" class="fullScreenCtrl"></button>
+  <button onclick="Fullscreen()" class="fullScreenCtrl"></button>
 
   <div class="black_screen">
     <p>toque na tela para começar</p>
@@ -39,7 +39,7 @@
               <h1 class="text-input">Usuário</h1>
             </div>
             <div>
-              <input onclick="clickInput('id')" type="text" name="input_user_id" id="input_user_id">
+              <input onclick="clickInput('id')" type="text" value="teste" name="input_user_id" id="input_user_id">
             </div>
           </div>
           <div class="row">
@@ -47,7 +47,7 @@
               <h1 class="text-input">Senha</h1>
             </div>
             <div>
-              <input onclick="clickInput('pass')" type="password" name="input_user_pass" id="input_user_pass">
+              <input onclick="clickInput('pass')" type="password" value="teste" name="input_user_pass" id="input_user_pass">
             </div>
           </div>
         </div>
@@ -287,28 +287,28 @@
         </div>
         <label id="live-chat" class="live-chat">
           <!-- <span class="msg_server_alert">
-            ====================================================================<br>
-            Bem-vindo ao Servidor Ragnarok JS - Desenvolvido por Daniel Neitzel<br>
-            Taxa de EXP: 150% ( Base 100% + Premium 0% + FreeServer 50% )<br>
-            Taxa de Drop: 100% ( Base 100% + Premium 0% + FreeServer 0% )<br>
-            Penalidade de Morte: 100% ( Base 100% + Premium 0% + FreeServer 0% )<br>
-            ====================================================================<br>
-          </span> -->
+          ====================================================================<br>
+          Bem-vindo ao Servidor Ragnarok JS - Desenvolvido por Daniel Neitzel<br>
+          Taxa de EXP: 150% ( Base 100% + Premium 0% + FreeServer 50% )<br>
+          Taxa de Drop: 100% ( Base 100% + Premium 0% + FreeServer 0% )<br>
+          Penalidade de Morte: 100% ( Base 100% + Premium 0% + FreeServer 0% )<br>
+          ====================================================================<br>
+        </span> -->
           <!-- <span class="msg_server">
-            Você recebeu uma nova missão.<br>
-          </span>
-          <span class="msg_system">
-            TutorialAprendiz : effect<br>
-          </span>
-          <span class="msg_error">
-            Este item não lhe é de direito.<br>
-          </span>
-          <span class="msg_pick_item">
-            Adaga do Aprendiz foi equipado.<br>
-          </span>
-          <span class="msg_player">
-            testando mensagem player<br>
-          </span> -->
+          Você recebeu uma nova missão.<br>
+        </span>
+        <span class="msg_system">
+          TutorialAprendiz : effect<br>
+        </span>
+        <span class="msg_error">
+          Este item não lhe é de direito.<br>
+        </span>
+        <span class="msg_pick_item">
+          Adaga do Aprendiz foi equipado.<br>
+        </span>
+        <span class="msg_player">
+          testando mensagem player<br>
+        </span> -->
         </label>
         <input disabled class="input-chat" type="text" id="inputChat" onclick="activeChatInput(this)">
       </div>
@@ -328,10 +328,10 @@
             <label class="hud-sp">SP <span class="bar-sp-base"><span id="currentSP" class="bar-sp-base-current">0 /
                   0</span></span><span id="currentPorcentSP">0%</span></label>
             <div class="userLevelsMap">
-              <label>Base. <span id="currentBaseLevel" class="bar-level-base">0</span> <span id="currentBaseExp" class="bar-exp-base"><span
-                    class="bar-exp-base-current"></span></span></label>
-              <label>Classe. <span id="currentClassLevel" class="bar-level-class">0</span> <span id="currentClassExp" class="bar-exp-class"><span
-                    class="bar-exp-class-current"></span></span></label>
+              <label>Base. <span id="currentBaseLevel" class="bar-level-base">0</span> <span id="currentBaseExp"
+                  class="bar-exp-base"><span class="bar-exp-base-current"></span></span></label>
+              <label>Classe. <span id="currentClassLevel" class="bar-level-class">0</span> <span id="currentClassExp"
+                  class="bar-exp-class"><span class="bar-exp-class-current"></span></span></label>
             </div>
           </div>
         </div>
@@ -340,9 +340,12 @@
           <span id="currentZeny" class="currentZeny"> Zeny: 0 </span>
         </div>
       </div>
+      <div class="win_mini_map">
+        ...
+      </div>
       <div class="win_menu_player">
         <button class="btn_menu_player">info</button>
-        <button class="btn_menu_player">habilidades</button>
+        <button onclick="cmd('abrirWinSkillsPlayer')" class="btn_menu_player">habilidades</button>
         <button class="btn_menu_player">itens</button>
         <button class="btn_menu_player">mapa</button>
         <button class="btn_menu_player">grupo</button>
@@ -368,8 +371,21 @@
           </div>
         </div>
       </div>
+      <div id="win_skills_player" class="block_default block_skills_player draggable hide" style="z-index: 1;">
+        <div class="default_header">
+          <span class="orb_blue"></span>
+          <p>Árvore de Habilidades</p>
+        </div>
+        <div class="default_body h_xl">
+          ...
+        </div>
+        <div class="default_footer">
+          <span id="habilityPoints" class="habilityPoints"> Pontos de Habilidade: 0</span>
+          <button class="btn btn_ok" onclick="cmd('confirmarHabilidades')"></button>
+          <button class="btn btn_cancel" onclick="cmd('fecharWinSkillsPlayer')"></button>
+        </div>
+      </div>
     </div>
-  </div>
   </div>
 
   <audio id="musicGame" controls loop class="hide">

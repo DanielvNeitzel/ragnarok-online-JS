@@ -25,5 +25,23 @@
         "value": "Obrigado por seus Serviços."
       }
     ]
+  },
+  "instructor_0_3": {
+    "name": "[Instrutor]",
+    "dialog1": "Seja muito bem-vindo, estou aqui para auxiliar na suas decisões para definir qual classe você se encaixaria melhor.",
+    "dialog2": "Você gostaria de passar pelo tutorial, ou ser redirecionado para cidade de Prontera?<br> ",
+    "options": [
+      {
+        "value": "Ir para cidade de Prontera."
+      },
+      {
+        "value": "Quero passar pelo tutorial."
+      }
+    ],
+    "options2": [
+      {
+        "value": "Uau, gostei muito."
+      }
+    ]
   }
 }

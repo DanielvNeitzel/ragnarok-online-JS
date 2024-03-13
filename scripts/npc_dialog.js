@@ -82,9 +82,21 @@ function speak(npc) {
           }
         });
         break;
+
       case 'Uau, gostei muito.':
         closeDialogOpt();
         break;
+
+      case 'Ir para cidade de Prontera.':
+        // generateMapAndNpcs('cid_prontera_centro');
+        closeDialogOpt();
+        break;
+
+      case 'Quero passar pelo tutorial.':
+        generateMapAndNpcs('Tutorial_0_4');
+        closeDialogOpt();
+        break;
+
       default:
         closeDialogOpt();
         break;
